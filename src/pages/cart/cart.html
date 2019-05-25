@@ -1,0 +1,148 @@
+<ion-header class="cart-header">
+    <ion-navbar color="header"> 
+        <button ion-button menuToggle>
+           <ion-icon name="menu">
+           </ion-icon>
+        </button>
+        <ion-title>{{"Cart"| translate}} 
+        </ion-title>
+        <ion-buttons end> 
+            <button ion-button icon-only light class="has-icon icon-only has-badge">
+            <ion-icon color="icon-color" name="md-basket">
+            </ion-icon>
+            <ion-badge class="badge badge-light" *ngIf="values.count">{{values.count}}
+            </ion-badge>
+            </button> 
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="cart">
+    <div class="spinner"><ion-spinner *ngIf="!cart" name="crescent"> </ion-spinner></div>
+
+    <div *ngIf="cart">
+        <div class="empty" *ngIf="cart.cart_contents.length == 0"> 
+            <ion-icon color="icon-color" name="md-basket"></ion-icon>
+            <h4 color="side-heading-color" text-center no-lines>{{"Your Cart Is Empty" | translate}}!</h4>
+            <h5 text-center no-lines>{{"Add some products available in our menu to checkout" | translate}}</h5> 
+            <button ion-button class="butt" item-center medium color="button-color" text-uppercase (click)="gohome()">{{"Continue Shopping" | translate}}</button> 
+        </div>
+
+        <div *ngIf="cart?.cart_contents">
+            <div class="cart-items">
+                <div class="cart-list" *ngFor="let item of cart.cart_contents | keys">
+                    <ion-item no-lines>
+                        <ion-thumbnail item-left (click)="getProduct(item.value.product_id)"> 
+                            <img src="{{item.value.thumb}}"> 
+                        </ion-thumbnail>
+                        <h2 wrap-text class="item-name">{{item.value.name}} </h2>
+                        <div *ngIf="item.value?.variation">
+                        <h3 wrap-text *ngFor="let variation of item.value.variation | keys">{{variation.value}}</h3>
+                        </div>
+                        <h3 wrap-text> {{"Price" | translate}}: {{item.value.price | currency:values.currency:symbol:'1.2-2'}} </h3>
+                        <h3 wrap-text> {{"Total" | translate}}: {{1*item.value.line_subtotal | currency:values.currency:symbol:'1.2-2'}} </h3>
+                        <a (click)="delete( item.key )">
+                            <ion-icon name="md-trash" style="font-size: 18px;color: #607D8B;"> </ion-icon>
+                        </a>
+
+                        <div class="add-remove-button"> 
+                            <button ion-button icon-only class="has-icon icon-only" no-margin item-right clear color="button-color" (click)="deleteFromCart(item.value.product_id, item.key)">
+                                <ion-icon name="md-remove"></ion-icon>
+                            </button> 
+                            <button ion-button item-right color="button-color" clear style="border: 0; margin: 0 5px;">{{item.value.quantity}}
+                            </button> 
+                            <button ion-button icon-only class="has-icon icon-only" no-margin item-right clear color="button-color" (click)="addToCart(item.value.product_id, item.key)">
+                                <ion-icon name="md-add">
+                                </ion-icon>
+                            </button> 
+                        </div>
+                    </ion-item>
+                </div>
+            </div>
+
+            <div *ngIf="cart.cart_contents.length != 0">
+                <!--ion-list *ngIf="shipping.length" no-margin text-wrap radio-group [(ngModel)]="chosen_shipping" (ngModelChange)="updateShipping(chosen_shipping)" class="shipping-methods">
+                    <ion-item-divider>
+                        <h2>{{"Select a shipping method" | translate}} </h2>
+                    </ion-item-divider>
+                    <ion-item *ngFor="let method of shipping | keys">
+                        <ion-label>{{method.value.method_title}} 
+                            <span *ngIf="method.value.cost">{{ 1*method.value.cost | currency:values.currency:symbol:'1.2-2'}}
+                            </span> 
+                        </ion-label>
+                        <ion-radio value="{{method.value.id + ':' + method.value.instance_id}}"> </ion-radio>
+                    </ion-item>
+                </ion-list-->
+
+                <form #f="ngForm" class="coupon">
+                    <ion-item>
+                        <ion-label>{{"Coupon Code" | translate}}</ion-label>
+                        <ion-input type="text" [(ngModel)]="cart.coupon" name="coupon"> </ion-input>
+                        <h2 item-right> 
+                            <button ion-button color="button-color" block type="submit" text-uppercase [disabled]='disableSubmitCoupon' (click)="submitCoupon()"> {{Apply | translate}}
+                            </button> 
+                        </h2>
+                    </ion-item>
+                </form>
+
+                <ion-list class="totals" *ngIf="cart.cart_totals">
+                    <ion-row>
+                        <ion-col width-75>
+                            <ion-label>{{"SubTotal" | translate}} </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>{{1*cart.cart_totals.subtotal | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="cart.cart_totals.cart_contents_total != 0">
+                        <ion-col width-75>
+                            <ion-label>{{"Subtotal_ex_tax" | translate}} </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>{{1*cart.cart_totals.cart_contents_total | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="cart.cart_totals.total_tax != 0">
+                        <ion-col width-75>
+                            <ion-label>{{"Tax Total" | translate}} </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>{{1*cart.cart_totals.total_tax | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="cart.cart_totals.discount_total && cart.cart_totals.discount_total != 0">
+                        <ion-col width-75 class="remove-coupon">
+                            <ion-label>{{"Coupons" | translate}} - {{cart.applied_coupons}} <a (click)="removeCoupon()"> (Remove)</a> </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>- {{1*cart.cart_totals.discount_total | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row *ngIf="cart.cart_totals.shipping_total != 0">
+                        <ion-col width-75>
+                            <ion-label>{{"Shipping" | translate}} </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>{{1*cart.cart_totals.shipping_total | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col width-75>
+                            <ion-label> <b> {{"Grand Total" | translate}}</b> </ion-label>
+                        </ion-col>
+                        <ion-col width-25 text-end>
+                            <ion-label>{{1*cart.cart_totals.total | currency:values.currency:symbol:'1.2-2'}} </ion-label>
+                        </ion-col>
+                    </ion-row>
+                </ion-list>
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+<div *ngIf="cart">
+    <ion-footer *ngIf="cart.cart_contents.length != 0"> 
+        <button ion-button full color="button-color" no-padding no-margin text-uppercase [disabled]='disableSubmit' (click)="checkout()"> {{Checkout | translate}}
+        </button> 
+    </ion-footer>
+</div>

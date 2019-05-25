@@ -1,0 +1,59 @@
+<ion-header class="address-header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu">
+      </ion-icon>
+    </button>
+    <ion-title>{{"Address" | translate}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-wrap class="account-address">
+  <div class="spinner"><ion-spinner *ngIf="!addresses" name="crescent">
+  </ion-spinner></div>
+  <div *ngIf="addresses" class="address">
+    <div *ngIf="addresses.billing" class="address-border">
+      <ion-item>
+        <h1>{{"Billing Address" | translate}}
+        </h1>
+        <h2>{{addresses.billing.first_name}} {{addresses.billing.last_name}}
+        </h2>
+        <h2>{{addresses.billing.phone}}
+        </h2>
+        <h2>{{addresses.billing.email}}
+        </h2>
+        <h2>{{addresses.billing.address_1}}
+        </h2>
+        <h2>{{addresses.billing.address_2}}
+        </h2>
+        <h2>{{addresses.billing.city}} {{addresses.billing.state}}
+        </h2>
+        <h2>{{addresses.billing.country}} {{addresses.billing.postcode}}
+        </h2>
+      </ion-item>
+    </div>
+    <div *ngIf="addresses.shipping" class="address-border">
+      <ion-item>
+        <h1>{{"Shipping Address" | translate}}
+        </h1>
+        <h2>{{addresses.shipping.first_name}} {{addresses.shipping.last_name}}
+        </h2>
+        <h2>{{addresses.shipping.phone}}
+        </h2>
+        <h2>{{addresses.shipping.address_1}}
+        </h2>
+        <h2>{{addresses.shipping.address_2}}
+        </h2>
+        <h2>{{addresses.shipping.city}} {{addresses.shipping.state}}
+        </h2>
+        <h2>{{addresses.shipping.country}} {{addresses.shipping.postcode}}
+        </h2>
+      </ion-item>
+    </div>
+    <div class="margin">
+      <button ion-button block color="button-color" type="submit" class="button button-block button-default" (click)="editAddress()">{{"Edit Address" | translate}}
+      </button>
+    </div>
+  </div>
+</ion-content>

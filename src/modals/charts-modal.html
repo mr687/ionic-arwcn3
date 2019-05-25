@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+        Charts
+        </ion-title>
+        <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+            <span ion-text color="primary" showWhen="ios">Cancel</span>
+            <!--<ion-icon name="md-close" showWhen="android,windows"></ion-icon>-->
+            <ion-icon name="md-close"></ion-icon>
+        </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+      
+<ion-content padding>
+    <ion-card *ngFor="let data of chartData; let i = index" justify-content-center align-items-center>
+        <ion-card-header text-wrap>
+            <h5>Pregunta P{{i + 1}}</h5>
+            <p>{{questionsText[i]}}</p>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-row>
+                <chart [chartData]="data"></chart>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

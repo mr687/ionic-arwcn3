@@ -1,0 +1,62 @@
+<ion-header class="filter-header">
+    <ion-navbar color="header">
+        <ion-buttons left style="padding-left:10px;">
+            <button clear ion-button (click)="clearAll()">
+            {{"Clear" | translate}}
+            </button>
+        </ion-buttons>
+        <ion-title>{{"Filter" | translate}}</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="dismiss()">
+                <ion-icon name="md-close" style="font-size: 20px; margin: 16px;"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content text-wrap class="filter-page">
+    <div class="filter">
+        <div class="spinner"><ion-spinner *ngIf="!values.attributes" name="crescent"> </ion-spinner></div>
+        <div class="price-filter" *ngIf="values.attributes">
+            <ion-item class="price-range">
+                <ion-label text-uppercase>{{"Price"| translate}} </ion-label>
+                <ion-input required type="text" [(ngModel)]="values.price.lower"> </ion-input>
+                <ion-input required type="text" [(ngModel)]="values.price.upper"> </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-range dualKnobs="true" pin="true" min="1" max="{{values.max_price}}" [(ngModel)]="values.price" color="dark">
+                    <ion-label range-left>1</ion-label>
+                    <ion-label range-right>{{values.max_price}}</ion-label>
+                </ion-range>
+            </ion-item>
+        </div>
+
+        <div class="attributes" *ngIf="values.attributes">
+            <div class="attributes" *ngIf="values.attributes?.length">
+                <ion-grid>
+                    <ion-row style="border: 4px solid #f8f8f8;">
+                        <ion-col width-40 class="col-left">
+                            <div *ngFor="let filterType of values.attributes" class="tab-left-item" [class.active]="filterType.selected">
+                                <button style="margin: 0px;" ion-button clear full color="dark" (click)="chooseTab(filterType)">{{filterType.name}}</button>
+                            </div>
+                        </ion-col>
+                        <ion-col width-60 class="col-right">
+                            <div class="spinner"><ion-spinner *ngIf="!attributeTerms[values?.selectedFilter?.id]" name="crescent"> </ion-spinner></div>
+                                <ion-list no-margin text-wrap>
+                                    <ion-item *ngFor="let val of attributeTerms[values?.selectedFilter?.id]">
+                                        <ion-label> {{val.name}} </ion-label>
+                                        <ion-checkbox [(ngModel)]="val.selected"> </ion-checkbox>
+                                    </ion-item>
+                                </ion-list>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+                <br>
+             </div>   
+        </div>
+    </div>
+</ion-content>
+
+<ion-footer *ngIf="values.attributes">
+    <button ion-button full text-uppercase no-margin color="button-color" (click)="applyFilter()"> {{"Apply" | translate}} </button>
+</ion-footer>

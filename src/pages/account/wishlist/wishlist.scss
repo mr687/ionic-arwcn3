@@ -1,0 +1,165 @@
+.wishlistPage {
+
+.margin{
+    margin: 5px;
+    h2 {
+    margin:60px  18px;
+    font-size: 14px;
+    color: $button-color;
+    text-align: center;
+    text-transform: uppercase;
+    }
+}
+
+h2{
+	margin-left: 16px;
+}
+h3{
+	margin-left: 16px;
+}
+
+
+.item ion-thumbnail {
+    min-width: 5.6rem;
+    min-height: 5.6rem;
+    width: 10rem;
+    height: 10rem;
+    margin: 8px;
+}
+.item ion-thumbnail img {
+    max-width: 10rem;
+    max-height: 10rem;
+    width: 10rem;
+    height: 10rem;
+}
+
+.col{
+	padding: 0;
+    height: 32px;
+}
+
+.no-stock-button{
+position: absolute;
+top: 2px;
+left: 0;
+width: 130px;
+font-size: 10px;
+margin: 12px;
+margin-left: -40px;
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+height: 21px;
+background-color: #f44336;
+}
+
+
+.item [item-left], .item [item-right] {
+    margin: 8px;
+}
+
+ion-label{
+	margin: 0;
+}
+
+.add-remove-button{
+    .item [item-left], .item [item-right] {
+    margin: 0;
+    }
+    .button{
+    font-size: 13px;
+    }
+}
+
+.wish-list{
+    border-bottom: 1px solid #f9f9f9;
+    margin-top: 5px;
+
+
+    h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 15px;
+    margin: 5px 0;
+    }
+    h3{
+    font-size: 13px;
+    margin: 5px 0;
+    }
+}
+
+.item{
+	padding-left: 0;
+}
+
+ion-icon{
+	font-size: 1.3em;
+	margin: 5px;
+}
+
+.empty {
+margin-top: 150px;
+
+        h4 {
+        font-size: 13px;
+        color: #777;
+        text-transform: uppercase;
+        margin: 30px 0;
+        }
+
+        img {
+        max-width: 200px;
+        height: 80px;
+        width: 100px;
+        margin: auto;
+        display: block;
+        }
+}
+
+.rating{
+    .star-icon {
+    color: #ddd;
+    font-size: 18px;
+    position: relative;
+    }
+
+    .star-icon.full:before {
+    color: #ffcd00;
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    }
+
+    .star-icon.half:before {
+    color: #ffcd00;
+    content: '\2605'; 
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    }
+
+    @-moz-document url-prefix() {
+        .star-icon {
+        font-size: 50px;
+        line-height: 34px;
+        }
+    }
+}
+
+.review-star{
+    .star-icon {
+    color: #ddd;
+    font-size: 1em;
+    position: relative;
+    }
+}
+
+
+}
+
+.wishlist-header{
+.toolbar-title-md {
+    padding-right: 45px;
+}
+}

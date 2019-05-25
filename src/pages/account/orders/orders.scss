@@ -1,0 +1,61 @@
+.account-order {
+font-family: Arial;
+
+.view-button{
+margin-top: 10px;
+}
+
+scroll-content{
+padding-bottom: 52px;
+}
+
+.item {
+padding: 0;
+}
+
+.label {
+margin: 11px 8px 11px 16px;
+}
+
+.item h2 {
+margin: 5px 0;
+font-size: 15px;
+font-weight: normal;
+}
+
+.item-ios.item-block .item-inner {
+padding-right: 8px;
+border-bottom: 0px solid #c8c7cc;
+}
+
+.no-orders{  
+
+        margin: 150px 0 40px 0;
+
+        ion-icon {
+        font-size: 4.2em;
+        color: #ccc;
+        }
+        .button{
+        font-size: 13px;
+        color: #777;
+        text-transform: uppercase;
+        }
+}
+
+.row-buttons{
+padding-left:0;
+
+        ion-icon{
+        padding-left: 0;
+        }
+        .button{
+        font-size: 13px;
+        }
+}
+
+.order-box{
+margin: 20px;
+box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+}

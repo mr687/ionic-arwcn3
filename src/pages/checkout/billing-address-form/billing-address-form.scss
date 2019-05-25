@@ -1,0 +1,409 @@
+.billing-address-form {
+
+.side-heading-background{
+background-color: #f9f9f9;
+ion-label{
+font-size: 15px;
+}
+}
+
+.margin{
+margin: 5px;
+}
+
+.shipping-address-list{
+margin: 10px 0;
+
+h2{
+font-size:15px; 
+font-weight:500;
+}
+}
+
+.datetime-text{
+    font-size: 15px;
+}
+
+.create-account{
+    margin-top: 10px;
+    ion-label{
+    font-size: 15px;
+    }
+}
+
+.create-account-form{
+    margin: 0px;
+
+    ion-list{
+      margin: 0;
+    }
+
+    .create-account-label{
+        margin:0;
+        padding:10px 20px 5px;
+        line-height: 1.5;
+    }
+
+    .label{
+    margin-left: 0;
+    }
+}
+
+.payment-method-title{
+padding-left: 20px;
+}
+
+.order-review-header{
+margin-top:10px;
+}
+
+.payment-method-header{
+margin-top:16px;
+}
+
+a{
+color:#387ef5;
+}
+
+.stripe-payment{
+margin: 0;
+padding: 10px;
+}
+
+.payment-instructions{
+margin: 0 16px 0 20px;
+padding-top: 16px;
+}
+
+.woocommerce-message{
+padding: 16px;
+}
+
+.button-margin{
+margin: 5px;
+}
+
+ion-label{
+font-size: 14px;
+margin: 0 0 0 20px;
+font-weight: 500;
+
+}
+scroll-content{
+padding-bottom: 52px;
+}
+ion-col {
+padding: 5px 5px 5px 0;
+}
+ion-row {
+padding: 5px 5px 5px 0;
+}
+
+.list {
+margin: 0;
+}
+
+.button {
+margin-bottom: 5px;
+padding: 0 1em;
+height: 2.5em;
+border-radius: 0;
+font-size: 14px;
+}
+
+.item {
+position: relative;
+padding-left: 0px;
+border-radius: 0;
+font-size: 1.7rem;
+color: #000;
+transition: background-color 200ms linear;
+}
+
+.login-form{
+
+   margin: 0 20px;
+
+   .list > .item-block:first-child {
+    border-top: none;
+   } 
+   .list > .item-block:last-child {
+    border-bottom: 0.5px solid #f9f9f9;
+   }
+   .list .item-block .item-inner {
+    border-bottom: none;
+   }
+   .item{
+   border-bottom: 0.5px solid #f9f9f9;
+   }
+   h2{
+   font-size: 13px;
+   text-align: right;
+   color: #777;
+   letter-spacing: 0.2px;
+   }
+   h3{
+   font-size: 15px;
+   text-align: center;
+   }
+   ion-icon{
+   color: #b5b5b5;
+   font-size: 2rem;
+   }
+
+   .login-button{
+        margin: 16px 0 16px;
+        .button{
+          border-radius: 2px;
+        }
+    }
+
+   .item ion-icon[item-left] {
+    margin-left: 0;
+    margin-top: 9px;
+    margin-bottom: 0;
+   }
+   input{
+       font-size: 15px;
+       color: #222;
+       letter-spacing: 0.2px;
+   }
+    .item-md ion-icon[item-left] + .item-inner {
+    margin-left: 0;
+    }
+}
+
+.list > .item-block:first-child,  {
+border-top: 1px solid #edecf1;
+}
+
+.list .item-block .item-inner {
+border-bottom: 1px solid #edecf1;
+}
+
+.item .item-label-floating .text-input {
+margin: 8px 0 8px 12px;
+}
+input:-webkit-autofill{
+background-color: #fff;
+color: #9e9898;
+}
+
+.order-review{
+   .col75{
+      min-width: 60%;
+      max-width: 60%;
+   } 
+
+   .col25{
+      min-width: 40%;
+      max-width: 40%;
+   }
+}
+
+
+.coupon{
+margin:-10px 0px 5px 0px;
+
+ion-list{
+margin: -10px 0 0 0;
+
+}
+ion-item{
+background-color: #f9ecf2;
+}
+.item-input ion-input, .item-input ion-textarea {
+position: static;
+background: #fff;
+margin:0 5px 5px 20px;
+}
+
+
+.item .item-label-floating [item-right] {
+margin-top: 20px;
+margin-bottom: 6px;
+}
+.item.item-block .item-inner {
+border-bottom: none;
+}
+.item.item-label-floating .text-input {
+margin: 8px 0 8px 12px;
+font-size: 14px;
+}
+
+}
+
+.list > .item-block:last-child,{
+border-bottom: none;
+}
+
+.item-input ion-input, .item-input ion-textarea {
+margin:0 5px 5px 20px;
+}
+
+
+.select-text {
+min-width: 16px;
+font-size: 14px;
+}
+
+.label-ios[floating] {
+margin-bottom: 0;
+margin-top: 5px;
+color: #444;
+font-size: 15px;
+}
+.item-input ion-input {
+margin: 0;
+}
+
+.item.item-label-floating .text-input {
+margin: 8px 0 8px 20px;
+font-size: 14px;
+}
+
+.item-md.item-toggle ion-label {
+margin-left: 16px;
+}
+
+.label-md[floating] {
+margin-bottom: 0;
+margin-left: 20px;
+color: #555;
+}
+
+.check-box{
+   margin: 10px 0 16px;
+
+    .item-ios.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: none;
+    }
+     .item.item-md .checkbox-md {
+        position: static;
+        display: block;
+        margin: 9px 12px 9px 20px;
+    }
+
+    .item.item-ios .checkbox-ios {
+        position: static;
+        display: block;
+        margin: 8px 0px 8px 20px;
+    }
+
+    .checkbox-md .checkbox-checked{
+        border-color: $button-color;
+        background-color: $button-color;
+    }
+
+    .checkbox-ios .checkbox-checked {
+      border-color: $button-color;
+      background-color: $button-color;
+    }
+
+    .Returningcustomer{
+        margin-top: 10px;
+          .label{
+             font-size: 15px;
+          }
+    }
+}
+
+.check-box-bottom{
+  
+  .col1{
+  max-width: 10%;
+  margin-left: 16px;
+  }
+
+  .col2{
+  .label{
+  margin: 0;
+  }
+  }
+
+    .checkbox-md .checkbox-checked{
+        border-color: $button-color;
+        background-color: $button-color;
+    }
+
+    .checkbox-ios .checkbox-checked {
+      border-color: $button-color;
+      background-color: $button-color;
+    }
+}
+
+.comment{
+    margin: 10px 16px;
+    .text-input {
+    border: 1px solid #a5a5a5;
+    height: 6.8em;
+    border-radius: 5px;
+    padding: 0 8px;
+    margin: 0 9px 9px 0;
+    font-size: 16px;
+    }
+   textarea {
+     border-radius:5px;
+     padding:5px 8px;
+     max-width:100%;
+     width:100%;
+     font-size: 14px;
+     line-height: 1.3;
+     border: 0.5px solid #f9f9f9;
+   }
+
+   .label{
+      margin: 12px 5px 12px;
+      font-weight:600;
+   }
+   h2{
+     font-size:14px;
+     margin-bottom:16px;
+     margin-left:5px;
+     font-weight:600;
+   }
+}
+
+
+.same-for-shipping-form{
+margin-top: 10px;
+}
+
+.shipping{
+  .item.item-block .item-inner {
+    padding-right: 8px;
+    border-bottom: 0;
+  }
+}
+
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+    border-bottom-color: #ddd;
+    box-shadow: none;
+    }
+
+    .item-md.item-input.input-has-focus .item-inner{
+    box-shadow: none;
+    }
+
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+    border-bottom-color: #ddd;
+    box-shadow: none;
+    }
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+    border-bottom-color: #ddd;
+    box-shadow: none;
+    }
+    .list-md .item-input.input-has-focus:last-child{
+    box-shadow: none;
+    }
+    .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom-color: #ddd;
+    box-shadow: none;
+    }
+  
+}
+
+.billing-header{
+
+}

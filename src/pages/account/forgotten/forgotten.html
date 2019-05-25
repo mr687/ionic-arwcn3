@@ -1,0 +1,21 @@
+<ion-header class="forgot-header">
+  <ion-navbar color="header">
+    <ion-title>{{"Forgot Password" | translate}} 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="forgotten">
+  <div class="margin">
+    <form #f="ngForm">
+      <ion-item>
+        <ion-input required type="email" [(ngModel)]="forgottenData.email" name="email" placeholder="{{'Enter Email Address' | translate}}">
+        </ion-input>
+      </ion-item>
+      <h2>{{"Type in your registered email id in the field and we will send you steps to reset your password" | translate}}
+      </h2>
+      <button ion-button block color="button-color" class="button button-block button-default" [disabled]="disableSubmit" (click)="forgotten(forgottenData.email)">{{Reset | translate}}
+      </button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,42 @@
+<ion-header class="filter-header">
+    <ion-navbar color="header">
+        <ion-title>{{"Sort" | translate}}
+        </ion-title>
+        <ion-buttons end> 
+            <button ion-button (click)="dismiss()">
+                <ion-icon name="md-close" style="font-size: 20px; margin: 16px;">       
+                </ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content text-wrap class="sort">
+    <ion-list radio-group [(ngModel)]="values.sortType">
+        <ion-item>
+            <ion-label text-wrap>{{"Default" | translate}} </ion-label>
+            <ion-radio value="0"> </ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label text-wrap>{{"Name" | translate}} (A - Z) </ion-label>
+            <ion-radio value="1"> </ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label text-wrap>{{"Name" | translate}} (Z - A) </ion-label>
+            <ion-radio value="2"> </ion-radio>
+        </ion-item>
+    </ion-list>
+    <ion-item>
+        <ion-label>{{"On sale" | translate}}</ion-label>
+        <ion-toggle color="button-color" [(ngModel)]="values.filter.on_sale"></ion-toggle>
+    </ion-item>
+    <ion-item>
+        <ion-label>{{"In stock" | translate}}</ion-label>
+        <ion-toggle color="button-color" [(ngModel)]="values.filter.in_stock"></ion-toggle>
+    </ion-item>
+</ion-content>
+
+<ion-footer> 
+    <button ion-button full no-margin text-uppercase color="button-color" (click)="applySort()"> {{"Apply" | translate}} 
+    </button> 
+</ion-footer>

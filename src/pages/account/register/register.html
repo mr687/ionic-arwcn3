@@ -1,0 +1,112 @@
+<ion-header class="register-header">
+  <ion-navbar color="header">
+    <button ion-button menuToggle>
+      <ion-icon name="menu">
+      </ion-icon>
+    </button>
+    <ion-title>{{"Register" | translate}}
+    </ion-title> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="account-register">
+  <div>
+    <form #f="ngForm">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>{{"First Name" | translate}}
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="registerData.first_name" name="firstname">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Last Name" | translate}}
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="registerData.last_name" name="lastname">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Email" | translate}}
+          </ion-label>
+          <ion-input type="email" [(ngModel)]="registerData.email" name="Email">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Password" | translate}}
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="registerData.password" name="password">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Phone" | translate}}
+          </ion-label>
+          <ion-input required type="number" [(ngModel)]="registerData.billing.phone" name="billing_phone">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Street Address" | translate}} 1
+          </ion-label>
+          <ion-input required type="text" [(ngModel)]="registerData.billing.address_1" name="billing_1">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Street Address" | translate}} 2
+          </ion-label>
+          <ion-input required type="text" [(ngModel)]="registerData.billing.address_2" name="billing_2">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"City" | translate}}
+          </ion-label>
+          <ion-input required type="text" [(ngModel)]="registerData.billing.city" name="billing_city">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>{{"Postcode" | translate}}
+          </ion-label>
+          <ion-input required type="number" [(ngModel)]="registerData.billing.postcode" name="postcode">
+          </ion-input>
+        </ion-item>
+        <ion-item *ngIf="countries.country">     
+          <ion-label>  
+            {{"Country" | translate}}
+          </ion-label>   
+          <ion-select [(ngModel)]="registerData.billing.country" (ngModelChange)="getBillingRegion(registerData.billing.country)" name="country">
+            <div *ngFor="let field of countries.country.countries | keys">
+              <ion-option value="{{field.key}}"><span [innerHTML]="field.value"></span>
+              </ion-option>
+            </div>
+          </ion-select>      
+        </ion-item>
+        <ion-item *ngIf="billing_states">  
+          <ion-label>  
+            {{"State" | translate}}
+          </ion-label>   
+          <ion-select [(ngModel)]="registerData.billing.state" name="state">
+            <div *ngFor="let field of billing_states | keys">
+              <ion-option value="{{field.key}}">{{field.value}}
+              </ion-option>
+            </div>
+          </ion-select>
+        </ion-item>
+        <ion-item *ngIf="!billing_states">
+          <ion-label floating>{{"State" | translate}}
+          </ion-label>
+          <ion-input required type="text" [(ngModel)]="registerData.billing.state" name="state">
+          </ion-input>
+        </ion-item>
+      </ion-list>
+
+        <div *ngIf="errors" class="margin">
+            <h2 style="text-align: center;">{{errors.message}}
+            </h2>
+        </div>
+
+      <div class="margin"> 
+        <button ion-button block color="button-color" type="submit" class="button button-block button-default" text-uppercase [disabled]="disableSubmit" (click)="registerCustomer()">{{Register | translate}}
+        </button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

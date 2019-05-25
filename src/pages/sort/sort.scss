@@ -1,0 +1,31 @@
+.sort {
+    .item-block:last-child .item-inner {
+        border-bottom: 0;
+    }
+    .list {
+        margin: 0px;
+    }
+    .button {
+        margin: 0;
+        height: 3.2em;
+    }
+    .list .item-block .item-inner {
+        border-bottom: 0;
+    }
+    .item.item-block .item-inner {
+        padding-right: 8px;
+        border-bottom: 0;
+    }
+    .list>.item-block:last-child {
+        border-bottom: 0;
+    }
+    .list>.item-block:first-child {
+        border-top: 0;
+    }
+    .item {
+        border: 1px solid #f9f9f9;
+        margin: 3px;
+        width: calc(100% - 6px);
+        background-color: #f9f9f9;
+    }
+}

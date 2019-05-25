@@ -1,16 +1,471 @@
-// http://ionicframework.com/docs/theming/
+@font-face {
+    //font-family: 'Montserrat-Regular';
+    //src: url("../assets/font/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+    //font-family: 'Montserrat-Light';
+    //src: url("../assets/font/Montserrat/Montserrat-Light.ttf");
+}
+@font-face {
+    //font-family: 'Montserrat-Bold';
+    //src: url("../assets/font/Montserrat/Montserrat-Bold.ttf");
+}
+* {
+    //font-family: 'Montserrat-Bold';
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#element::-webkit-scrollbar {
+    display: none;
+}
+.swiper-pagination-bullet-active {
+    background: #000;
+    opacity: 1;
+}
+.scroll-content {
+    overflow-y: auto !important;
+}
+.toast-md .toast-wrapper {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    z-index: 10;
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    background: #333;
+}
+.toast-md .toast-wrapper.toast-top {
+    top: 16px;
+}
+.center-spinner {
+    ion-spinner {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+        height: 50vh;
+        margin-top: -30px;
+    }
+}
+.spinner-crescent circle {
+    stroke: #111111;
+    stroke-width: 1px;
+    stroke-dasharray: 90px;
+}
+.item-radio.item ion-label {
+    font-size: 15px;
+}
+.item-radio-checked.item ion-label {
+    color: $button-color;
+}
+.radio .radio-checked .radio-inner {
+    border-color: $button-color;
+}
+.radio-md .radio-checked {
+    border-color: $button-color;
+}
+.radio-md .radio-inner {
+    background-color: $button-color;
+}
+//alert
+.alert-ios .alert-button, .alert-md .alert-button {
+    color: $button-color;
+}
+.alert-ios [aria-checked=true] .alert-radio-label, .alert-md [aria-checked=true] .alert-radio-label {
+    color: $button-color;
+}
+.alert-ios [aria-checked=true] .alert-radio-inner, .alert-md [aria-checked=true] .alert-radio-inner {
+    border-color: $button-color;
+}
+.alert-ios .alert-title, .alert-md .alert-title {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.alert-ios .alert-radio-label, .alert-md .alert-radio-label {
+    font-size: 14px;
+}
+.alert-ios .alert-button {
+    color: #fff;
+    background-color: $button-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+}
+.alert-md [aria-checked=true] .alert-radio-icon {
+    border-color: $button-color;
+}
+.alert-md .alert-radio-inner {
+    background-color: $button-color;
+}
+.alert-ios .alert-radio-label {
+    white-space: pre-line;
+}
+.alert-md .alert-radio-label {
+    white-space: pre-line;
+}
+.alert-wp .alert-radio-label {
+    white-space: pre-line;
+}
+.toggle-md .toggle-checked .toggle-inner, .toggle-ios .toggle-checked .toggle-inner {
+    background-color: $button-color;
+}
+.toggle-md .toggle-checked, .toggle-ios .toggle-checked {
+    background-color: #fff;
+}
+.toggle.toggle-checked .toggle-icon {
+    //background-color: $button-color;
+}
+//badge
+.badge {
+    position: absolute;
+    top: -8%;
+    right: 4%;
+    right: calc(10% - 5px);
+    padding: 1px 6px;
+    height: auto;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000;
+    background-color: #fff;
+    border: 0.2px solid #e2e2e2;
+}
+/*.title-md{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}*/
 
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.button {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+ion-spinner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+a {
+    color: #222;
+}
+.menu-toolbar {
+    .toolbar {
+        height: 90px;
+        min-height: 20px;
+        border-width: 0 0 0.55px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+    .button-customername {
+        text-align: center;
+    }
+    .button-welcome {
+        text-align: center;
+    }
+    .profile-image img {
+        //border-radius: 50%;
+        margin: 10px 0; //border: 4px solid rgba(255, 255, 255, 0.4);
+        padding-top: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        width: 200px;
+    }
+}
+.sidemenugrad {
+    background-color: $menu-background-color;
+    .scroll-content {
+        bottom: 50px;
+    }
+    ion-label {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .menu-items {
+        .item>ion-icon, .item-inner>ion-icon {
+            font-size: 1.6rem;
+            width: 20px;
+            height: 20px;
+            max-height: 20px;
+            max-width: 20px;
+            min-width: 20px;
+            min-height: 20px;
+        }
+        .item {
+            ion-icon {
+                color: white;
+                background-color: $button-color;
+                padding: 2px;
+                border-radius: 2px;
+                line-height: 0;
+            }
+        }
+        ion-label {
+            font-size: 13px;
+            font-weight: 600;
+        }
+    }
+    .item {
+        background-color: transparent;
+        color: $menu-text-color;
+    }
+    .item-divider {
+        background-color: $menu-background-color;
+        border-bottom: 0.55px solid $menu-border-color;
+        color: $menu-text-color;
+        font-size: 17px;
+        ion-icon {
+            color: #fff;
+            background-color: #FF5722;
+            padding: 2px;
+            border-radius: 2px;
+            line-height: 0;
+            font-size: 1.6rem;
+            width: 20px;
+            height: 20px;
+            max-height: 20px;
+            max-width: 20px;
+            min-width: 20px;
+            min-height: 20px;
+        }
+    }
+    margin-top: 90px;
+    .list .item-block .item-inner {
+        border-bottom: 0.22px solid $menu-border-color;
+    }
+    .list>.item-block:last-child {
+        border-bottom: 0.22px solid $menu-border-color;
+    }
+    .list>.item-block:last-child .item-inner {
+        border-bottom: 0.22;
+    }
+    .category-name {
+        .item {
+            padding-left: 20px;
+            height: 40px;
+            max-height: 40px;
+            min-height: 40px;
+        }
+        ion-icon {
+            color: #7d7d7d;
+            font-size: 1.8rem;
+            padding-top: 5px;
+        }
+    }
+    .item-md ion-icon[item-left]+.item-inner {
+        margin-left: 0;
+    }
+    .activated {
+        opacity: 0.6;
+        ion-icon {
+            opacity: 0.6;
+        }
+    }
+}
+[dir="rtl"] {
+    .item-ios ion-icon[item-left], .item-ios ion-icon[item-right] {
+        margin-top: 9px;
+        margin-bottom: 8px;
+        margin-left: 12px;
+    }
+    .item-ios[detail-push] .item-inner, button.item-ios:not([detail-none]) .item-inner, a.item-ios:not([detail-none]) .item-inner {
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%…><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23c8c7cc'/></svg>");
+        padding: 0;
+        background-repeat: no-repeat;
+        background-position: left 14px center;
+        background-size: 14px 14px;
+    }
+    .text-input {
+        direction: rtl;
+    }
+    .swiper-container-android .swiper-slide, .swiper-wrapper {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        direction: ltr;
+    }
+    .swiper-container-ios .swiper-slide, .swiper-wrapper {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        direction: ltr;
+    }
+    .back-button-icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+        transform: rotate(180deg);
+    }
+    .back-button-icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back {
+        transform: rotate(180deg);
+        padding: 0 5px;
+    }
+    .offer {
+        top: 5px;
+        right: 5px;
+    }
+    .wishlist-button-grid1 {
+        top: 5px;
+        left: 20px;
+    }
+    .wishlist-button-grid2 {
+        top: 5px;
+        left: 20px;
+    }
+    .bottom-left-button {
+        float: right;
+        right: 134px !important;
+        bottom: 8px;
+        position: absolute;
+    }
+    .bottom-right-button {
+        left: 5px;
+    }
+    .item {
+        padding-right: 8px !important;
+        padding-left: 0 !important;
+    }
+    .searchbar-md .searchbar-input, .searchbar-ios .searchbar-input {
+        font-size: 14px;
+        direction: rtl;
+    }
+    .button-in-stock .wishlist2 {
+        left: 2px;
+    }
+    .button-in-stock .wishlist1 {
+        left: 2px;
+    }
+    .order-review {
+        .label {
+            margin: 0;
+        }
+    }
+    .product-page {
+        .label {
+            margin: 13px 10px 13px 10px;
+        }
+    }
+    .cart-items .add-remove-button {
+        left: 10px;
+    }
+    .item-md ion-icon[item-left]+.item-inner {
+        margin-right: 0;
+    }
+    .banner_block .floating-header {
+        padding-right: 30%;
+    }
+    .product-block .floating-header {
+        padding-right: 30%;
+    }
+    .category .floating-header {
+        padding-right: 30%;
+    }
+    .review-star-group .progress-bar {
+        margin-right: 3px;
+    }
+    .reviews .review-star {
+        float: left;
+    }
+    .order-summary .text-right {
+        ion-label {
+            float: left;
+        }
+    }
+    .billing-address-form {
+        ion-label {
+            margin-right: 10px;
+        }
+        .order-review {
+            ion-label {
+                margin-top: 0;
+                margin-bottom: 0;
+                margin: 0 10px;
+            }
+        }
+        .item-label-floating .input-wrapper {
+            margin-right: 10px;
+        }
+        .item-radio ion-label {
+            margin: 0 10px;
+        }
+        ion-checkbox{
+        padding: 4px 16px 0 0;
+        }
+        .payment-instructions{
+        padding-right: 16px;
+        }
+    }
+}
+[dir="ltr"] {
+    .offer {
+        top: 5px;
+        left: 5px;
+    }
+    .wishlist-button-grid1 {
+        top: 5px;
+        right: 20px;
+    }
+    .wishlist-button-grid2 {
+        top: 5px;
+        right: 20px;
+    }
+    .bottom-right-button {
+        right: 5px;
+    }
+    .bottom-left-button {
+        float: left;
+        left: 134px !important;
+        bottom: 8px;
+        position: absolute;
+    }
+    .button-in-stock .wishlist2 {
+        right: 2px;
+    }
+    .button-in-stock .wishlist1 {
+        right: 2px;
+    }
+    .cart-items .add-remove-button {
+        right: 10px;
+    }
+    .category .floating-header {
+        padding-left: 30%;
+    }
+    .banner_block .floating-header {
+        padding-left: 30%;
+    }
+    .product-block .floating-header {
+        padding-left: 30%;
+    }
+    .product-page {
+        .label {
+            margin: 13px 10px 13px 10px;
+        }
+    }
+    .reviews .review-star {
+        float: right;
+    }
+    .review-star-group .progress-bar {
+        margin-left: 3px;
+    }
+    .order-summary .text-right {
+        ion-label {
+            float: right;
+        }
+    }
+    .item ion-thumbnail[item-left] {
+        margin-left: 10px;
+    }
+    .billing-address-form {
+        ion-label {
+            margin-left: 15px;
+        }
+        .order-review {
+            ion-label {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

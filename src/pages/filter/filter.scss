@@ -1,0 +1,89 @@
+.filter-page {
+    .filter {
+        margin-bottom: 20px;
+        .price-filter {
+            margin: 5px 5px 0 5px;
+        }
+        .price-range {
+            .text-input {
+                text-align: center;
+                height: 35px;
+                margin: 5px;
+                background: #fff;
+            }
+        }
+        .badge {
+            position: relative;
+        }
+        .list {
+            margin-bottom: 0;
+        }
+        .item {
+            background-color: #f8f8f8;
+            margin: 0;
+        }
+        .item.item-block .item-inner {
+            padding-right: 0;
+            border-bottom: none;
+        }
+        .attributes {
+            .item {
+                background-color: #fff;
+                margin-top: 0;
+            }
+            .list>.item-block:first-child {
+                border-top: 0;
+            }
+            .list>.item-block:last-child {
+                border-bottom: 0;
+            }
+            .active {
+                background-color: #fff;
+                border-left: 4px solid #535766;
+                margin-left: -4px;
+            }
+            .col-left {
+                padding: 0;
+                background-color: #f8f8f8;
+                .button-inner {
+                    justify-content: flex-start;
+                }
+            }
+            .col-right {
+                padding: 0;
+                background-color: #fff;
+            }
+        }
+        .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+            border-bottom-color: #f9f9f9;
+            box-shadow: none;
+        }
+        .item-md.item-input.input-has-focus .item-inner {
+            box-shadow: none;
+        }
+        .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+            border-bottom-color: #f9f9f9;
+            box-shadow: none;
+        }
+        .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+            border-bottom-color: #f9f9f9;
+            box-shadow: none;
+        }
+        .list-md .item-input.input-has-focus:last-child {
+            box-shadow: none;
+        }
+        .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+            border-bottom-color: #f9f9f9;
+            box-shadow: none;
+        }
+        ion-footer {
+            button {
+                margin: 4px 0 0 0;
+            }
+            button {
+                height: 3.4em;
+                background-color: #1b9a1b;
+            }
+        }
+    }
+}

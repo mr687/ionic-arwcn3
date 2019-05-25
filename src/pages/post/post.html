@@ -1,0 +1,13 @@
+<ion-header class="settings-header">
+    <ion-navbar color="header"> <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+     </button>
+        <ion-title *ngIf="post?.post_title">{{post.post_title}} </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content class="post" padding>
+    <div class="spinner"><ion-spinner *ngIf="!post" name="crescent"> </ion-spinner></div>
+    <div *ngIf="post">
+        <div [innerHTML]="post.post_content"></div>
+    </div>
+</ion-content>
