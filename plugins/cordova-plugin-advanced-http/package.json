@@ -1,0 +1,158 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-advanced-http",
+        "scope": null,
+        "escapedName": "cordova-plugin-advanced-http",
+        "name": "cordova-plugin-advanced-http",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Apps/Customer App/WooCommerce"
+    ]
+  ],
+  "_from": "cordova-plugin-advanced-http@latest",
+  "_id": "cordova-plugin-advanced-http@1.11.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-advanced-http",
+  "_nodeVersion": "8.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-advanced-http_1.11.0_1519949366546_0.0844071746183992"
+  },
+  "_npmUser": {
+    "name": "silkimen",
+    "email": "sefa@ilkimen.net"
+  },
+  "_npmVersion": "2.15.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-advanced-http",
+    "scope": null,
+    "escapedName": "cordova-plugin-advanced-http",
+    "name": "cordova-plugin-advanced-http",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-advanced-http/-/cordova-plugin-advanced-http-1.11.0.tgz",
+  "_shasum": "0322e8efab9c0f94cf62176597cc6236e4eac64f",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-advanced-http",
+  "_where": "/Users/Apps/Customer App/WooCommerce",
+  "author": {
+    "name": "Wymsee"
+  },
+  "bugs": {
+    "url": "https://github.com/silkimen/cordova-plugin-advanced-http/issues"
+  },
+  "contributors": [
+    {
+      "name": "devgeeks"
+    },
+    {
+      "name": "EddyVerbruggen"
+    },
+    {
+      "name": "mbektchiev"
+    },
+    {
+      "name": "denisbabineau"
+    },
+    {
+      "name": "andrey-tsaplin"
+    },
+    {
+      "name": "pvsaikrishna"
+    },
+    {
+      "name": "cvillerm"
+    },
+    {
+      "name": "hideov"
+    },
+    {
+      "name": "Mobisys"
+    }
+  ],
+  "cordova": {
+    "id": "cordova-plugin-advanced-http",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova / Phonegap plugin for communicating with HTTP servers using SSL pinning",
+  "devDependencies": {
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "colors": "1.1.2",
+    "cordova": "7.1.0",
+    "mocha": "4.0.0",
+    "mock-require": "2.0.2",
+    "mz": "2.7.0",
+    "umd-tough-cookie": "2.3.2",
+    "wd": "1.4.1",
+    "xml2js": "0.4.19"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0322e8efab9c0f94cf62176597cc6236e4eac64f",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-advanced-http/-/cordova-plugin-advanced-http-1.11.0.tgz",
+    "fileCount": 50,
+    "unpackedSize": 795452
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=4.0.0"
+    }
+  ],
+  "gitHead": "af239d31944b712ad2cea8590ce9b480ea8c32b5",
+  "homepage": "https://github.com/silkimen/cordova-plugin-advanced-http#readme",
+  "keywords": [
+    "cordova",
+    "device",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android",
+    "ssl",
+    "tls"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "jkfb",
+      "email": "jbgh@posteo.mx"
+    },
+    {
+      "name": "silkimen",
+      "email": "sefa@ilkimen.net"
+    }
+  ],
+  "name": "cordova-plugin-advanced-http",
+  "optionalDependencies": {},
+  "readme": "Cordova Advanced HTTP\n=====================\n[![npm version](https://badge.fury.io/js/cordova-plugin-advanced-http.svg)](https://badge.fury.io/js/cordova-plugin-advanced-http)\n[![downloads/month](https://img.shields.io/npm/dm/cordova-plugin-advanced-http.svg)](https://www.npmjs.com/package/cordova-plugin-advanced-http)\n[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png)](https://opensource.org/licenses/mit-license.php)\n[![Build Status](https://travis-ci.org/silkimen/cordova-plugin-advanced-http.svg?branch=master)](https://travis-ci.org/silkimen/cordova-plugin-advanced-http)\n\n\nCordova / Phonegap plugin for communicating with HTTP servers.  Supports iOS, Android and [Browser](#browserSupport).\n\nThis is a fork of [Wymsee's Cordova-HTTP plugin](https://github.com/wymsee/cordova-HTTP).\n\n## Advantages over Javascript requests\n\n - Background threading - all requests are done in a background thread.\n - Handling of HTTP code 401 - read more at [Issue CB-2415](https://issues.apache.org/jira/browse/CB-2415).\n - SSL Pinning - read more at [LumberBlog](http://blog.lumberlabs.com/2012/04/why-app-developers-should-care-about.html).\n\n## Updates\n\nPlease check [CHANGELOG.md](CHANGELOG.md) for details about updating to a new version.\n\n## Installation\n\nThe plugin conforms to the Cordova plugin specification, it can be installed\nusing the Cordova / Phonegap command line interface.\n\n```shell\nphonegap plugin add cordova-plugin-advanced-http\n\ncordova plugin add cordova-plugin-advanced-http\n```\n\n## Usage\n\n### Plain Cordova\n\nThis plugin registers a global object located at `cordova.plugin.http`.\n\n### With Ionic-native wrapper\n\nCheck the [Ionic docs](https://ionicframework.com/docs/native/http/) for how to use this plugin with Ionic-native.\n\n### With AngularJS (Deprecated)\n\n:warning: *This feature is deprecated and will be removed anytime soon.* :warning:\n\nThis plugin creates a cordovaHTTP service inside of a cordovaHTTP module.  You must load the module when you create your app's module.\n\n```js\nvar app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'cordovaHTTP']);\n```\n\nYou can then inject the cordovaHTTP service into your controllers.  The functions can then be used identically to the examples shown below except that instead of accepting success and failure callback functions, each function returns a promise.  For more information on promises in AngularJS read the [AngularJS docs](http://docs.angularjs.org/api/ng/service/$q).  For more info on promises in general check out this article on [html5rocks](http://www.html5rocks.com/en/tutorials/es6/promises/).  Make sure that you load cordova.js or phonegap.js after AngularJS is loaded.\n\n\n## Synchronous Functions\n\n### getBasicAuthHeader\nThis returns an object representing a basic HTTP Authorization header of the form `{'Authorization': 'Basic base64encodedusernameandpassword'}`\n\n```js\nvar header = cordova.plugin.http.getBasicAuthHeader('user', 'password');\n```\n\n### useBasicAuth\nThis sets up all future requests to use Basic HTTP authentication with the given username and password.\n\n```js\ncordova.plugin.http.useBasicAuth('user', 'password');\n```\n\n### setHeader<a name=\"setHeader\"></a>\nSet a header for all future requests to a specified host. Takes a hostname, a header and a value (must be a string value).\n\n```js\ncordova.plugin.http.setHeader('Hostname', 'Header', 'Value');\n```\n\nYou can also define headers used for all hosts by using wildcard character \"\\*\" or providing only two params.\n\n```js\ncordova.plugin.http.setHeader('*', 'Header', 'Value');\ncordova.plugin.http.setHeader('Header', 'Value');\n```\n\nThe hostname also includes the port number. If you define a header for `www.example.com` it will not match following URL `http://www.example.com:8080`.\n\n```js\n// will match http://www.example.com/...\ncordova.plugin.http.setHeader('www.example.com', 'Header', 'Value');\n\n// will match http://www.example.com:8080/...\ncordova.plugin.http.setHeader('www.example.com:8080', 'Header', 'Value');\n```\n\n### setDataSerializer<a name=\"setDataSerializer\"></a>\nSet the data serializer which will be used for all future PATCH, POST and PUT requests. Takes a string representing the name of the serializer.\n\n```js\ncordova.plugin.http.setDataSerializer('urlencoded');\n```\n\nYou can choose one of these:\n* `urlencoded`: send data as url encoded content in body (content type \"application/x-www-form-urlencoded\")\n* `json`: send data as JSON encoded content in body (content type \"application/json\")\n* `utf8`: send data as plain UTF8 encoded string in body (content type \"plain/text\")\n\nYou can also override the default content type headers by specifying your own headers (see [setHeader](#setHeader)).\n\n__Caution__: `urlencoded` does not support serializing deep structures whereas `json` does.\n\n### setRequestTimeout\nSet how long to wait for a request to respond, in seconds.\n\n```js\ncordova.plugin.http.setRequestTimeout(5.0);\n```\n\n### getCookieString\nReturns saved cookies (as string) matching given URL.\n\n```js\ncordova.plugin.http.getCookieString(url);\n```\n\n### setCookie\nAdd a custom cookie. Takes a URL, a cookie string and an options object. See [ToughCookie documentation](https://github.com/salesforce/tough-cookie#setcookiecookieorstring-currenturl-options-cberrcookie) for allowed options.\n\n```js\ncordova.plugin.http.setCookie(url, cookie, options);\n```\n\n### clearCookies\nClear the cookie store.\n\n```js\ncordova.plugin.http.clearCookies();\n```\n\n## Asynchronous Functions\nThese functions all take success and error callbacks as their last 2 arguments.\n\n### enableSSLPinning\nEnable or disable SSL pinning.  This defaults to false.\n\nTo use SSL pinning you must include at least one .cer SSL certificate in your app project.  You can pin to your server certificate or to one of the issuing CA certificates. For ios include your certificate in the root level of your bundle (just add the .cer file to your project/target at the root level).  For android include your certificate in your project's platforms/android/assets folder.  In both cases all .cer files found will be loaded automatically.  If you only have a .pem certificate see this [stackoverflow answer](http://stackoverflow.com/a/16583429/3182729).  You want to convert it to a DER encoded certificate with a .cer extension.\n\nAs an alternative, you can store your .cer files in the www/certificates folder.\n\n```js\ncordova.plugin.http.enableSSLPinning(true, function() {\n  console.log('success!');\n}, function() {\n  console.log('error :(');\n});\n```\n\n### acceptAllCerts\nAccept all SSL certificates.  Or disable accepting all certificates.  This defaults to false.\n\n```js\ncordova.plugin.http.acceptAllCerts(true, function() {\n  console.log('success!');\n}, function() {\n  console.log('error :(');\n});\n```\n\n### disableRedirect\nIf set to `true`, it won't follow redirects automatically. This defaults to false.\n\n```js\ncordova.plugin.http.disableRedirect(true, function() {\n  console.log('success!');\n}, function() {\n  console.log('error :(');\n});\n```\n\n### validateDomainName\nThis function was removed in v1.6.2. Domain name validation is disabled automatically when you enable \"acceptAllCerts\".\n\n### removeCookies\nRemove all cookies associated with a given URL.\n\n```js\ncordova.plugin.http.removeCookies(url, callback);\n```\n\n### sendRequest\nExecute a HTTP request.  Takes a URL and an options object. This is the internally used implementation of the following shorthand functions ([post](#post), [get](#get), [put](#put), [patch](#patch), [delete](#delete), [head](#head), [uploadFile](#uploadFile) and [downloadFile](#downloadFile)). You can use this function, if you want to override global settings for each single request.\n\nThe options object contains following keys:\n\n* `method`: HTTP method to be used, defaults to `get`, needs to be one of the following values:\n  * `get`, `post`, `put`, `patch`, `head`, `delete`, `upload`, `download`\n* `data`: payload to be send to the server (only applicable on `post`, `put` or `patch` methods)\n* `params`: query params to be appended to the URL (only applicable on `get`, `head`, `delete`, `upload` or `download` methods)\n* `serializer`: data serializer to be used (only applicable on `post`, `put` or `patch` methods), defaults to global serializer value, see [setDataSerializer](#setDataSerializer) for supported values\n* `timeout`: timeout value for the request in seconds, defaults to global timeout value\n* `headers`: headers object (key value pair), will be merged with global values\n* `filePath`: filePath to be used during upload and download see [uploadFile](#uploadFile) and [downloadFile](#downloadFile) for detailed information\n* `name`: name to be used during upload see [uploadFile](#uploadFile) for detailed information\n\nHere's a quick example:\n\n```js\nconst options = {\n  method: 'post',\n  data: { id: 12, message: 'test' },\n  headers: { Authorization: 'OAuth2: token' }\n};\n\ncordova.plugin.http.sendRequest('https://google.com/', options, function(response) {\n  // prints 200\n  console.log(response.status);\n}, function(response) {\n  // prints 403\n  console.log(response.status);\n\n  //prints Permission denied\n  console.log(response.error);\n});\n```\n\n### post<a name=\"post\"></a>\nExecute a POST request.  Takes a URL, data, and headers.\n\n#### success\nThe success function receives a response object with 3 properties: status, data, and headers.  **status** is the HTTP response code as numeric value. **data** is the response from the server as a string. **headers** is an object with the headers. The keys of the returned object are the header names and the values are the respective header values. All header names are lowercase.\n\nHere's a quick example:\n\n```js\n{\n  status: 200,\n  data: '{\"id\": 12, \"message\": \"test\"}',\n  headers: {\n    'content-length': '247'\n  }\n}\n```\n\nMost apis will return JSON meaning you'll want to parse the data like in the example below:\n\n```js\ncordova.plugin.http.post('https://google.com/', {\n  id: 12,\n  message: 'test'\n}, { Authorization: 'OAuth2: token' }, function(response) {\n  // prints 200\n  console.log(response.status);\n  try {\n    response.data = JSON.parse(response.data);\n    // prints test\n    console.log(response.data.message);\n  } catch(e) {\n    console.error('JSON parsing error');\n  }\n}, function(response) {\n  // prints 403\n  console.log(response.status);\n\n  //prints Permission denied\n  console.log(response.error);\n});\n```\n\n#### failure\nThe error function receives a response object with 3 properties: status, error and headers.  **status** is the HTTP response code as numeric value. **error** is the error response from the server as a string.  **headers** is an object with the headers. The keys of the returned object are the header names and the values are the respective header values. All header names are lowercase.\n\nHere's a quick example:\n\n```js\n{\n  status: 403,\n  error: 'Permission denied',\n  headers: {\n    'content-length': '247'\n  }\n}\n```\n\n### get<a name=\"get\"></a>\nExecute a GET request.  Takes a URL, parameters, and headers.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n```js\ncordova.plugin.http.get('https://google.com/', {\n  id: 12,\n  message: 'test'\n}, { Authorization: 'OAuth2: token' }, function(response) {\n  console.log(response.status);\n}, function(response) {\n  console.error(response.error);\n});\n```\n\n### put<a name=\"put\"></a>\nExecute a PUT request.  Takes a URL, data, and headers.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n### patch<a name=\"patch\"></a>\nExecute a PATCH request.  Takes a URL, data, and headers.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n### delete<a name=\"delete\"></a>\nExecute a DELETE request.  Takes a URL, parameters, and headers.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n### head<a name=\"head\"></a>\nExecute a HEAD request.  Takes a URL, parameters, and headers.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n### uploadFile<a name=\"uploadFile\"></a>\nUploads a file saved on the device.  Takes a URL, parameters, headers, filePath, and the name of the parameter to pass the file along as.  See the [post](#post) documentation for details on what is returned on success and failure.\n\n```js\ncordova.plugin.http.uploadFile(\"https://google.com/\", {\n    id: 12,\n    message: 'test'\n}, { Authorization: 'OAuth2: token' }, 'file:///somepicture.jpg', 'picture', function(response) {\n    console.log(response.status);\n}, function(response) {\n    console.error(response.error);\n});\n```\n\n### downloadFile<a name=\"downloadFile\"></a>\nDownloads a file and saves it to the device.  Takes a URL, parameters, headers, and a filePath.  See [post](#post) documentation for details on what is returned on failure.  On success this function returns a cordova [FileEntry object](http://cordova.apache.org/docs/en/3.3.0/cordova_file_file.md.html#FileEntry).\n\n```js\ncordova.plugin.http.downloadFile(\"https://google.com/\", {\n  id: 12,\n  message: 'test'\n}, { Authorization: 'OAuth2: token' }, 'file:///somepicture.jpg', function(entry) {\n  // prints the filename\n  console.log(entry.name);\n\n  // prints the filePath\n  console.log(entry.fullPath);\n}, function(response) {\n  console.error(response.error);\n});\n```\n\n## Browser support<a name=\"browserSupport\"></a>\n\nThis plugin supports a very restricted set of functions on the browser platform.\nIt's meant for testing purposes, not for production grade usage.\n\nFollowing features are *not* supported:\n\n* Manipulating Cookies\n* Uploading and Downloading files\n* Pinning SSL certificate\n* Disabling SSL certificate check\n* Disabling transparently following redirects (HTTP codes 3xx)\n\n## Libraries\n\nThis plugin utilizes some awesome open source libraries:\n\n - iOS - [AFNetworking](https://github.com/AFNetworking/AFNetworking) (MIT licensed)\n - Android - [http-request](https://github.com/kevinsawicki/http-request) (MIT licensed)\n - Cookie handling - [tough-cookie](https://github.com/salesforce/tough-cookie) (BSD-3-Clause licensed)\n\nWe made a few modifications to the networking libraries.\n\n## Contribute & Develop\n\nWe've set up a separate document for our [contribution guidelines](CONTRIBUTING.md).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silkimen/cordova-plugin-advanced-http.git"
+  },
+  "scripts": {
+    "buildbrowser": "./scripts/build-test-app.sh --browser",
+    "release": "npm run test && ./scripts/release.sh",
+    "test": "npm run testjs && npm run testapp",
+    "testandroid": "./scripts/build-test-app.sh --android --emulator && ./scripts/test-app.sh --android --emulator",
+    "testapp": "npm run testandroid && npm run testios",
+    "testios": "./scripts/build-test-app.sh --ios --emulator && ./scripts/test-app.sh --ios --emulator",
+    "testjs": "mocha ./test/js-mocha-specs.js"
+  },
+  "version": "1.11.0"
+}

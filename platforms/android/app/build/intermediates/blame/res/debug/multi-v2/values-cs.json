@@ -1,0 +1,77 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-cs\\values-cs.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-11.2.2.aar\\5a0a4004d91d0e0b77e53453c92ec56d\\res\\values-cs\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "230",
+                        "endColumns": "96",
+                        "endOffsets": "326"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "2704",
+                        "endColumns": "100",
+                        "endOffsets": "2800"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\47238076491da568b447114e28423a97\\res\\values-cs\\values-cs.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2805",
+                        "endColumns": "100",
+                        "endOffsets": "2901"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\values-cs\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,387,579,702,810,1022,1147,1273,1507,1616,1811,1937,2157,2338,2432,2525",
+                        "endColumns": "103,191,122,107,211,124,125,233,108,194,125,219,180,93,92,110",
+                        "endOffsets": "386,578,701,809,1021,1146,1272,1506,1615,1810,1936,2156,2337,2431,2524,2635"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,405,532,644,856,985,1317,1551,1664,1859,1989,2209,2394,2492,2589",
+                        "endColumns": "107,191,126,111,211,128,129,233,112,194,129,219,184,97,96,114",
+                        "endOffsets": "208,400,527,639,851,980,1110,1546,1659,1854,1984,2204,2389,2487,2584,2699"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.2.2.aar\\9d35746ec502c8a24bb6c51857f0e20f\\res\\values-cs\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "201",
+                        "endOffsets": "486"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "1115",
+                        "endColumns": "201",
+                        "endOffsets": "1312"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<a style="float:right;font-size:12px;" href="http://github.com/ionic-team/ionic-native/edit/master/src/@ionic-native/plugins/social-sharing/index.ts#L1">
+  Improve this doc
+</a>
+
+# Social Sharing
+
+```
+$ ionic cordova plugin add cordova-plugin-x-socialsharing
+$ npm install --save @ionic-native/social-sharing
+```
+
+## [Usage Documentation](https://ionicframework.com/docs/native/social-sharing/)
+
+Plugin Repo: [https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin](https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)
+
+Share text, files, images, and links via social networks, sms, and email.
+
+For Browser usage check out the Web Share API docs: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin#web-share-api
+
+## Supported platforms
+- Android
+- Browser
+- iOS
+- Windows
+- Windows Phone
+
+
+

@@ -1,0 +1,87 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-apprate",
+        "scope": null,
+        "escapedName": "cordova-plugin-apprate",
+        "name": "cordova-plugin-apprate",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Apps/Customer App/WooCommerce"
+    ]
+  ],
+  "_from": "cordova-plugin-apprate@latest",
+  "_id": "cordova-plugin-apprate@1.3.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-apprate",
+  "_nodeVersion": "7.9.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-apprate-1.3.0.tgz_1494344743839_0.7016909853555262"
+  },
+  "_npmUser": {
+    "name": "westonganger",
+    "email": "westonganger@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-apprate",
+    "scope": null,
+    "escapedName": "cordova-plugin-apprate",
+    "name": "cordova-plugin-apprate",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-apprate/-/cordova-plugin-apprate-1.3.0.tgz",
+  "_shasum": "0f2bbcf680738e972045e9787771048f620abbc5",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-apprate",
+  "_where": "/Users/Apps/Customer App/WooCommerce",
+  "bugs": {
+    "url": "https://github.com/pushandplay/cordova-plugin-apprate/issues"
+  },
+  "dependencies": {
+    "cordova": "*"
+  },
+  "description": "A plugin to provide rate this app functionality into your Cordova / Phonegap application<br>",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cordovacli": "*"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "0f2bbcf680738e972045e9787771048f620abbc5",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-apprate/-/cordova-plugin-apprate-1.3.0.tgz"
+  },
+  "gitHead": "c0ed9c0ca037f8990186e1eed682abe44a4b0b73",
+  "homepage": "https://github.com/pushandplay/cordova-plugin-apprate#readme",
+  "maintainers": [
+    {
+      "name": "speige",
+      "email": "devingarner@gmail.com"
+    },
+    {
+      "name": "westonganger",
+      "email": "westonganger@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-apprate",
+  "optionalDependencies": {},
+  "readme": "# Cordova-Plugin-Apprate\n\nA plugin to provide rate this app functionality into your Cordova / Phonegap application<br>\n\n[Donate with PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=MS8RQAS2NVVQW&lc=RU&item_name=github%2ecom&item_number=cordova%2dplugin%2dapprate&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted)\n\n**PR's are greatly appreciated**\n\n## Supported platforms\n\n- iOS\n- Android\n- Windows\n- Blackberry\n\n## Requirements\n\nCordova 3.0.0 or later\n\n## Installation\n\n- From apache cordova plugins registry: `cordova plugins add cordova-plugin-apprate`\n- From github repository: `cordova plugins add https://github.com/pushandplay/cordova-plugin-apprate.git`\n- From phonegap build add the following to your config.xml: `<gap:plugin name=\"cordova-plugin-apprate\" />`\n\n## Customization and usage\n\n## Options / Preferences\nThese options are available on the `AppRate.preferences` object. \n\nNote: All `%@` patterns in customLocale object will be automatically replaced to your application title\n\n| Option | Type | Default | Description |\n| :------ | :---- | :------- | :----------- |\n| useLanguage | String | null | custom BCP 47 language tag |\n| displayAppName | String | '' | custom application title |\n| promptAgainForEachNewVersion | Boolean | true | show dialog again when application version will be updated |\n| usesUntilPrompt | Integer | 3 | count of runs of application before dialog will be displayed |\n| openStoreInApp | Boolean | false | leave app or no when application page opened in app store (now supported only for iOS) |\n| useCustomRateDialog | Boolean | false | use custom view for rate dialog |\n| callbacks.onButtonClicked | Function | null | call back function. called when user clicked on rate-dialog buttons |\n| callbacks.onRateDialogShow | Function | null | call back function. called when rate-dialog showing |\n| storeAppURL.ios | String | null | application id in AppStore |\n| storeAppURL.android | String | null | application URL in GooglePlay |\n| storeAppURL.windows | String | null | application URL in Windows Store |\n| storeAppURL.blackberry | String | null | application URL in AppWorld |\n| storeAppURL.windows8 | String | null | application URL in WindowsStore |\n| customLocale | Object | null | custom locale object |\n\n## Examples\n\nMakes sure all your calls to the plugin happen after the cordova `onDeviceReady` event has fired.\n\n### Simple setup and call\n\n```javascript\nAppRate.preferences.storeAppURL = {\n  ios: '<my_app_id>',\n  android: 'market://details?id=<package_name>',\n  windows: 'ms-windows-store://pdp/?ProductId=<the apps Store ID>',\n  blackberry: 'appworld://content/[App Id]/',\n  windows8: 'ms-windows-store:Review?name=<the Package Family Name of the application>'\n};\n\nAppRate.promptForRating();\n```\n\n### Don't Call rate dialog immediately\n\n```javascript\nAppRate.promptForRating(false);\n```\nIf false is not present it will ignore usesUntilPrompt, promptAgainForEachNewVersion, and button logic, it will prompt every time.\n\n### Override dialog button callback\n\n```javascript\nAppRate.preferences.callbacks.onButtonClicked = function(buttonIndex) {\n  console.log(\"onButtonClicked -> \" + buttonIndex);\n};\n```\n\n### Set custom language\n\n```javascript\nAppRate.preferences.useLanguage = 'ru';\n```\n\n### Set custom Locale object\n\n```javascript\nAppRate.preferences.customLocale = {\n  title: \"Rate %@\",\n  message: \"If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!\",\n  cancelButtonLabel: \"No, Thanks\",\n  laterButtonLabel: \"Remind Me Later\",\n  rateButtonLabel: \"Rate It Now\"\n};\n```\n\n### Full setup\n\n```javascript\nAppRate.preferences = {\n  openStoreInApp: true,\n  displayAppName: 'My custom app title',\n  usesUntilPrompt: 5,\n  promptAgainForEachNewVersion: false,\n  storeAppURL: {\n    ios: '<my_app_id>',\n    android: 'market://details?id=<package_name>',\n    windows: 'ms-windows-store://pdp/?ProductId=<the apps Store ID>',\n    blackberry: 'appworld://content/[App Id]/',\n    windows8: 'ms-windows-store:Review?name=<the Package Family Name of the application>'\n  },\n  customLocale: {\n    title: \"Rate %@\",\n    message: \"If you enjoy using %@, would you mind taking a moment to rate it? It won’t take more than a minute. Thanks for your support!\",\n    cancelButtonLabel: \"No, Thanks\",\n    laterButtonLabel: \"Remind Me Later\",\n    rateButtonLabel: \"Rate It Now\"\n  }\n};\n\nAppRate.promptForRating();\n```\n\n### Callbacks setup and use custom rate-dialog\n\n```javascript\nAppRate.preferences = {\n  useCustomRateDialog: true,\n  callbacks: {\n    onRateDialogShow: function(callback){\n      callback(1) // cause immediate click on 'Rate Now' button\n    },\n    onButtonClicked: function(buttonIndex){\n      console.log(\"onButtonClicked -> \" + buttonIndex);\n    }\n  }\n};\n```\n\n### Access to locales\n\n```javascript\n// Getting list of names for available locales\nAppRate.locales.getLocalesNames();\n\n// Getting locale object by name\nAppRate.locales.getLocale('en');\n```\n\n### List of translations\nhttps://github.com/pushandplay/cordova-plugin-apprate/blob/master/www/locales.js\n\n# Credits\n\nCurrently maintained by [@westonganger](https://github.com/westonganger)\n\nCreated by [@pushandplay](https://github.com/pushandplay)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushandplay/cordova-plugin-apprate.git"
+  },
+  "scripts": {},
+  "version": "1.3.0"
+}

@@ -1,0 +1,141 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "onesignal-cordova-plugin",
+        "scope": null,
+        "escapedName": "onesignal-cordova-plugin",
+        "name": "onesignal-cordova-plugin",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Apps/Customer App/WooCommerce"
+    ]
+  ],
+  "_from": "onesignal-cordova-plugin@latest",
+  "_id": "onesignal-cordova-plugin@2.3.1",
+  "_inCache": true,
+  "_location": "/onesignal-cordova-plugin",
+  "_nodeVersion": "9.4.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/onesignal-cordova-plugin_2.3.1_1519324376615_0.7363169780472685"
+  },
+  "_npmUser": {
+    "name": "nightsd01",
+    "email": "nightsd01@gmail.com"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "onesignal-cordova-plugin",
+    "scope": null,
+    "escapedName": "onesignal-cordova-plugin",
+    "name": "onesignal-cordova-plugin",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-2.3.1.tgz",
+  "_shasum": "b6c3c8b8d78f0f7f565cbe13bdc1c0e9c8bbb5c5",
+  "_shrinkwrap": null,
+  "_spec": "onesignal-cordova-plugin",
+  "_where": "/Users/Apps/Customer App/WooCommerce",
+  "author": {
+    "name": "Josh Kasten & Brad Hesse"
+  },
+  "bugs": {
+    "url": "https://github.com/onesignal/OneSignal-Cordova-SDK/issues"
+  },
+  "cordova": {
+    "id": "onesignal-cordova-plugin",
+    "platforms": [
+      "android",
+      "ios",
+      "windows",
+      "amazon-fireos"
+    ]
+  },
+  "cordova_name": "OneSignal Push Notifications",
+  "dependencies": {},
+  "description": "OneSignal is a high volume Push Notification service for mobile apps. In addition to basic notification delivery, OneSignal also provides tools to localize, target, schedule, and automate notifications that you send.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-J7GCCXx7fwY5QzCRuPHaQ1+AoiWHdW78XYeHoyIbzezvl901To5eUVEYm/boznsa3sEcQRPfeZxa5s1XERTYCA==",
+    "shasum": "b6c3c8b8d78f0f7f565cbe13bdc1c0e9c8bbb5c5",
+    "tarball": "https://registry.npmjs.org/onesignal-cordova-plugin/-/onesignal-cordova-plugin-2.3.1.tgz",
+    "fileCount": 14,
+    "unpackedSize": 548152
+  },
+  "engines": [
+    {
+      "name": "cordova-android",
+      "version": ">=4.0.0"
+    },
+    {
+      "name": "apple-xcode",
+      "version": ">=8.0.0"
+    },
+    {
+      "name": "apple-ios",
+      "version": ">=7.0.0"
+    },
+    {
+      "name": "cordova",
+      "version": ">=6.4.0"
+    },
+    {
+      "name": "cordova-ios",
+      "version": ">=4.3.0"
+    }
+  ],
+  "gitHead": "55cfa9dc0029bcc930272192fd387516be77bdeb",
+  "homepage": "https://github.com/onesignal/OneSignal-Cordova-SDK#readme",
+  "keywords": [
+    "push",
+    "notification",
+    "push notification",
+    "push notifications",
+    "apns",
+    "gcm",
+    "adm",
+    "retention",
+    "messaging",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-amazon-fireos"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "nightsd01",
+      "email": "nightsd01@gmail.com"
+    },
+    {
+      "name": "onesignal",
+      "email": "josh@onesignal.com"
+    }
+  ],
+  "name": "onesignal-cordova-plugin",
+  "optionalDependencies": {},
+  "platforms": [
+    "android",
+    "ios",
+    "windows",
+    "amazon-fireos"
+  ],
+  "readme": "### OneSignal Cordova Push Notification Plugin\n[![npm version](https://img.shields.io/npm/v/onesignal-cordova-plugin.svg)](https://www.npmjs.com/package/onesignal-cordova-plugin)\n[![npm downloads](https://img.shields.io/npm/dm/onesignal-cordova-plugin.svg)](https://www.npmjs.com/package/onesignal-cordova-plugin)\n\n[OneSignal](https://onesignal.com/) is a free push notification service for mobile apps. \n\nThis plugin makes it easy to integrate your [Cordova](http://cordova.apache.org/) based (e.g. [Ionic](http://ionicframework.com/), [PhoneGap](https://phonegap.com/), PhoneGap Build, [Intel XDK](https://software.intel.com/en-us/intel-xdk/documentation) or [Sencha Touch](https://www.sencha.com/products/touch/)) app with OneSignal. \n\nIt supports Android, iOS, Windows Phone 8.1 (WP8.1), and Amazon's Fire OS platforms.\n\nSee the [Documentation](https://documentation.onesignal.com/docs) for setup instructions:\n- Cordova: https://documentation.onesignal.com/docs/cordova-sdk-setup\n- Ionic: https://documentation.onesignal.com/docs/ionic-sdk-setup\n- Phonegap: https://documentation.onesignal.com/docs/phonegap-sdk-setup\n- Intel XDK: https://documentation.onesignal.com/docs/intel-xdk-setup\n\nOnce the plugin is setup, use the Cordova SDK docs for all additional methods: https://documentation.onesignal.com/docs/cordova-sdk\n\nThere is a Cordova example project as well: https://github.com/OneSignal/OneSignal-Cordova-Example \n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onesignal/OneSignal-Cordova-SDK.git"
+  },
+  "version": "2.3.1"
+}

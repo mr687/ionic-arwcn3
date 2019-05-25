@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "com-sarriaroman-photoviewer",
+        "scope": null,
+        "escapedName": "com-sarriaroman-photoviewer",
+        "name": "com-sarriaroman-photoviewer",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/Apps/Customer App/WooCommerce"
+    ]
+  ],
+  "_from": "com-sarriaroman-photoviewer@latest",
+  "_id": "com-sarriaroman-photoviewer@1.1.16",
+  "_inCache": true,
+  "_location": "/com-sarriaroman-photoviewer",
+  "_nodeVersion": "8.9.4",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/com-sarriaroman-photoviewer_1.1.16_1519851389228_0.13492820616976542"
+  },
+  "_npmUser": {
+    "name": "sarriaroman",
+    "email": "agustin478@gmail.com"
+  },
+  "_npmVersion": "5.6.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "com-sarriaroman-photoviewer",
+    "scope": null,
+    "escapedName": "com-sarriaroman-photoviewer",
+    "name": "com-sarriaroman-photoviewer",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/com-sarriaroman-photoviewer/-/com-sarriaroman-photoviewer-1.1.16.tgz",
+  "_shasum": "94514d3cefcea90bbbe502a9868d275a87d47eed",
+  "_shrinkwrap": null,
+  "_spec": "com-sarriaroman-photoviewer",
+  "_where": "/Users/Apps/Customer App/WooCommerce",
+  "author": {
+    "name": "Román A. Sarria"
+  },
+  "bugs": {
+    "url": "https://github.com/sarriaroman/photoviewer/issues"
+  },
+  "cordova": {
+    "id": "com-sarriaroman-photoviewer",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "This plugin is intended to show a picture from an URL into a Photo Viewer with zoom features.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-Yuq4oNn5+jwKH9iD1Ybaj4a1GpsyscrgB1nJCmwFafTIXKdFW6gHc3l8i0ywTc1FGej4hKeqWT4XJsupMfOdNQ==",
+    "shasum": "94514d3cefcea90bbbe502a9868d275a87d47eed",
+    "tarball": "https://registry.npmjs.org/com-sarriaroman-photoviewer/-/com-sarriaroman-photoviewer-1.1.16.tgz",
+    "fileCount": 10,
+    "unpackedSize": 24081
+  },
+  "gitHead": "729ca8ec096eb63d9102e67b2b122e7bd7ddbbca",
+  "homepage": "https://github.com/sarriaroman/photoviewer#readme",
+  "keywords": [
+    "cordova",
+    "photoviewer",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "sarriaroman",
+      "email": "agustin478@gmail.com"
+    }
+  ],
+  "name": "com-sarriaroman-photoviewer",
+  "optionalDependencies": {},
+  "readme": "# Photo Viewer  \n> This plugin is intended to show a picture from an URL into a Photo Viewer with zoom features.\n\n## How to Install\n\nCordova:\n```bash\ncordova plugin add com-sarriaroman-photoviewer\n```\n\nIonic 2:\n```bash\n$ ionic cordova plugin add com-sarriaroman-photoviewer\n$ npm install --save @ionic-native/photo-viewer\n```\n\n### Android\n> Out of the box\n\n### iOS\n> Out of the box\n\n\n### API\n\n#### Show an image\n\n```\nPhotoViewer.show('http://my_site.com/my_image.jpg', 'Optional Title');\n```\n\nOptionally you can pass third parameter which can be used to hide the share button [ONLY FOR ANDROID]\n\n##### Usage\n\n```\nPhotoViewer.show('http://my_site.com/my_image.jpg', 'Optional Title', {share:false});\n```\n\n### Versions  \n(1.0.2) Removed Podfile and the dependency  \n(1.1.0)\n- Removing project dependencies.  \n- Moving to Gradle  \n- Adding Square's Picasso as Image Loader  \n- New Optional Title\n- Share button and title bar\n- Automatic close on error.\n- Support for content:// Uris from Cordova\n- Replaced old namespace\n- Published to NPM  \n\n(1.1.1)\n- Fix for sharing due to online restriction\n\n(1.1.2)\n- Fix issues on iOS\n- iOS title not updating\n\n(1.1.3)\n- Issue fixes\n\n(1.1.4)\n- Base64 Support on Android\n\n(1.1.5)\n- Option to hide and show share button on Android\n\n(1.1.7)  \n- Fix OOM issues on Android\n\n(1.1.9/10)  \n- Fix how image is shown on Android\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarriaroman/photoviewer.git"
+  },
+  "version": "1.1.16"
+}

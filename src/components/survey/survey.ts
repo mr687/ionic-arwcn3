@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 import * as Survey from 'survey-angular';
+// import * as ko from 'knockout'; window['knockout'] = ko;
 
 /**
  * Generated class for the SurveyComponent component.
