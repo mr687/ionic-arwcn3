@@ -49,7 +49,7 @@ export class Home {
     }
     getProduct(item) {
         // window.open('http://cirung.com/wp-content/uploads/2019/04/1-2.jpg','_system','location=yes');
-        this.nav.push(ProductPage, item);
+        this.nav.push(ProductPage,item);
     }
     presentToastLoginAlert() {
         let toast = this.toastCtrl.create({

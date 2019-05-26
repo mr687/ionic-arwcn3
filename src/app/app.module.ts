@@ -55,7 +55,9 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 //import { GooglePlus } from '@ionic-native/google-plus';
 
 import { SurveyPage } from '../pages/survey/survey';
-import { SurveyComponent } from '../components/survey/survey';
+
+// import { SurveyPageModule } from '../pages/survey/survey.module';
+import { ComponentsModule } from '../components/components.module';
 
 import { SurveyProvider } from '../providers/survey/survey';
 import { ApiWrapper } from '../providers/survey/api-wrapper';
@@ -70,7 +72,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    SurveyComponent,
+    // SurveyComponent,
     Address,
     EditAddressForm,
     AccountForgotten,
@@ -94,6 +96,8 @@ export function createTranslateLoader(http: HttpClient) {
     Sort,
   ],
   imports: [
+    ComponentsModule,
+    // SurveyPageModule,
     BrowserModule,
     HttpClientModule,
     KeysPipeModule,

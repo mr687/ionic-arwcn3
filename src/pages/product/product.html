@@ -183,11 +183,40 @@
                     </ion-row>
                 </ion-grid>
 
-            <div *ngIf="product?.short_description" class="description">
+            <div *ngIf="ishref" class="description">
                 <div class="devider"></div>
                 <ion-item no-lines class="item-background"> {{"Description" | translate}} </ion-item>
                 <ion-item text-wrap no-lines>
-                    <div [innerHTML]="product.short_description"> </div>
+                    <div class="scroll-related-products">
+                        <div *ngIf="!linkBySlug?.short_description">
+                            <p>Loading...</p>
+                        </div>
+                        <a [style.width.%]="values.dimensions.productSliderWidth" *ngIf="linkBySlug?.short_description">
+                            <ion-card>
+                                <ion-card-content (click)="getProduct(linkBySlug)">
+                                    <img [style.height.px]="values.dimensions.scrollProductHeight" src="{{linkBySlug?.images[0]?.src}}" /> 
+                                </ion-card-content>
+                                <h5>{{linkBySlug?.name}}</h5>
+                                <ion-label> 
+                                    <span class="price-regular" *ngIf="!linkBySlug?.sale_price">{{1*linkBySlug?.price | currency:values.currency:true:'1.2-2'}}</span>
+                                    <span class="price-regular" *ngIf="linkBySlug?.sale_price">{{1*linkBySlug?.sale_price | currency:values.currency:true:'1.2-2'}}</span>
+                                    <span *ngIf="linkBySlug?.sale_price">
+                                        <del class="price-delete">{{1*linkBySlug?.regular_price | currency:values.currency:true:'1.2-2'}}</del>
+                                    </span>
+                                </ion-label>
+                            </ion-card>
+                            <strong>{{linkBySlugTitle}}</strong>
+                        </a>
+                    </div>
+                </ion-item>
+            </div>
+
+            <div *ngIf="!ishref" class="description">
+                <div class="devider"></div>
+                <ion-item no-lines class="item-background"> {{"Description" | translate}} </ion-item>
+                <ion-item text-wrap no-lines>
+                    <div [innerHTML]="product?.short_description" > 
+                    </div>
                 </ion-item>
             </div>
             <div *ngIf="product?.description" class="description">

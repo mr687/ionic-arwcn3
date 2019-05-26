@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
 
 import { SurveyProvider } from '../../providers/survey/survey';
 
@@ -18,7 +18,6 @@ import 'rxjs/add/observable/forkJoin';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-survey',
   templateUrl: 'survey.html',

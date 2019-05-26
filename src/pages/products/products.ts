@@ -85,9 +85,10 @@ export class ProductsPage {
         return obj3;
     }
     external(url){
-     var options = "location=yes,hidden=no,toolbar=yes";
-            let browser = this.iab.create(url, '_blank', options);
-            browser.show();
+        console.log(url);
+        var options = "location=yes,hidden=no,toolbar=yes";
+        let browser = this.iab.create(url, '_blank', options);
+        browser.show();
     }
     getProducts(id) {
         this.nav.push(ProductsPage, id);

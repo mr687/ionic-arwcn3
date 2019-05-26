@@ -18,6 +18,7 @@ import { Slides } from 'ionic-angular';
 export class ProductPage {
     @ViewChild(Content) content: Content;
     @ViewChild(Slides) slides: Slides;
+    ishref:any;
     product: any;
     id: any;
     status: any;
@@ -43,14 +44,16 @@ export class ProductPage {
     disableBuyNow: boolean = false;
     filter: any = {};
     usedVariationAttributes: any = [];
+    hrefSlug:any;
+    linkBySlug:any;
+    relPro:any = [];
+    linkBySlugTitle:any;
 
     constructor(public iab: InAppBrowser, private photoViewer: PhotoViewer, public modalCtrl: ModalController, public nav: NavController, public service: ProductService, params: NavParams, public functions: Functions, public values: Values, public toastCtrl: ToastController, private socialSharing: SocialSharing, public loadingCtrl: LoadingController) {
-        
+        this.ishref = false;
+        this.hrefSlug = "";
         if(params.data.id){
             this.product = params.data;
-
-            // console.log(this.product);
-
             this.usedVariationAttributes = this.product.attributes.filter(function (attribute) { return attribute.variation == true });
             this.id = params.data.id;
             this.options.product_id = this.id;
@@ -59,6 +62,7 @@ export class ProductPage {
             this.getUpsellProducts();
             this.getCrossSellProducts();
             this.getReviews();
+            this.setProductHref(this.product.short_description);
         }
         else {
             this.id = params.data;
@@ -70,6 +74,34 @@ export class ProductPage {
         this.AddToCart = "Add To Cart";
         
     }
+
+    setProductHref(string) {
+        var arr = string.split('href="');
+        var title = string.split('<strong>');
+        if(title[1]){
+            title = title[1].split('</strong>');
+            if(title[0]){
+                this.linkBySlugTitle = title[0];
+            }else{
+                this.linkBySlugTitle = "Mau coba?";
+            }
+        }
+        if(arr[1]) {
+            var arrProduct = arr[1].split('"');
+            var linkProduct = arrProduct[0];
+            var checkExists = linkProduct.split('/shop/');
+            if(linkProduct && checkExists) {
+                this.ishref = true;
+                var lenArr = linkProduct.split('/');
+                if(lenArr[lenArr.length-1] == ""){
+                    this.hrefSlug = lenArr[lenArr.length-2];
+                }else{
+                    this.hrefSlug = lenArr[lenArr.length-1];
+                }
+            }
+        }
+    }
+
     handleProductResults(results) {
         this.product = results;
         this.usedVariationAttributes = this.product.attributes.filter(function (attribute) { return attribute.variation == true });
@@ -80,9 +112,9 @@ export class ProductPage {
         this.getReviews();
     }
     external(url){
-     var options = "location=yes,hidden=no,toolbar=yes";
-            let browser = this.iab.create(url, '_blank', options);
-            browser.show();
+        var options = "location=yes,hidden=no,toolbar=yes";
+        let browser = this.iab.create(url, '_blank', options);
+        browser.show();
     }
     getVariationProducts() {
         this.service.getVariationProducts(this.product.id).then((results) => this.variations = results);
@@ -175,15 +207,50 @@ export class ProductPage {
     getRelatedProduct(item) {
         this.nav.push(ProductPage, item);
     }
+    updateRelateSlug(){
+        let relatedSlug = this.hrefSlug;
+        let results = this.relPro;
+        if(this.ishref){
+            for (var i = 0; i < results.length; i++) {
+                if(results[i].slug == relatedSlug){
+                    this.linkBySlug = results[i];
+                    break;
+                }   
+            }
+        }
+    }
+    updateRelated(results) {
+        this.related = results;
+        for(let i = 0; i< results.length;i++){
+            this.relPro.push(results[i]);
+        }
+        this.updateRelateSlug();
+    }
+    updateUpsell(results) {
+        this.upsell = results;
+        for(let i = 0; i< results.length;i++){
+            this.relPro.push(results[i]);
+        }
+        this.updateRelateSlug();
+    }
+    updateCross(results) {
+        this.crossSell = results
+        for(let i = 0; i< results.length;i++){
+            this.relPro.push(results[i]);
+        }
+        this.updateRelateSlug();
+    }
+
     getRelatedProducts() {
         if (this.product.related_ids != 0) {
         for(let item in this.product.related_ids)
         this.filter['include[' + item + ']'] = this.product.related_ids[item];
       
             this.service.getRelatedProducts(this.filter)
-               .then((results) => this.related = results);
+               .then((results) => this.updateRelated(results));
         }
     }
+
 
     getUpsellProducts() {
         if (this.product.upsell_ids != 0) {
@@ -191,9 +258,10 @@ export class ProductPage {
         this.filter['include[' + item + ']'] = this.product.upsell_ids[item];
       
             this.service.getUpsellProducts(this.filter)
-               .then((results) => this.upsell = results);
+               .then((results) => this.updateUpsell(results));
         }
     }
+
 
     getCrossSellProducts() {
         if (this.product.cross_sell_ids != 0) {
@@ -201,7 +269,7 @@ export class ProductPage {
         this.filter['include[' + item + ']'] = this.product.cross_sell_ids[item];
       
             this.service.getCrossSellProducts(this.filter)
-               .then((results) => this.crossSell = results);
+               .then((results) => this.updateCross(results));
         }
     }
     showMoreReviews(productName, count, rating) {
