@@ -48,6 +48,9 @@ export class ProductPage {
         
         if(params.data.id){
             this.product = params.data;
+
+            // console.log(this.product);
+
             this.usedVariationAttributes = this.product.attributes.filter(function (attribute) { return attribute.variation == true });
             this.id = params.data.id;
             this.options.product_id = this.id;

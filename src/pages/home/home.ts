@@ -48,6 +48,7 @@ export class Home {
         pager: true
     }
     getProduct(item) {
+        // window.open('http://cirung.com/wp-content/uploads/2019/04/1-2.jpg','_system','location=yes');
         this.nav.push(ProductPage, item);
     }
     presentToastLoginAlert() {
@@ -87,6 +88,7 @@ export class Home {
         this.nav.push(ProductsPage, {filter: {on_sale: true}});
     }
     goto(data){
+        console.log(data);
         if(data.description == "product"){
             this.nav.push(ProductPage, data.url);   
         }
