@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { Home } from '../pages/home/home';
@@ -56,7 +56,6 @@ import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 import { SurveyPage } from '../pages/survey/survey';
 
-import { SurveyComponent } from '../components/survey/survey';
 import { SurveyProvider } from '../providers/survey/survey';
 import { ApiWrapper } from '../providers/survey/api-wrapper';
 import { TimingInterceptor } from '../interceptors/timing-interceptor';
@@ -75,6 +74,7 @@ export function createTranslateLoader(http: HttpClient) {
     AccountForgotten,
     AccountLogin,
     OrderDetails,
+    SurveyPage,
     Orders,
     AccountRegister,
     WishlistPage,
@@ -89,10 +89,8 @@ export function createTranslateLoader(http: HttpClient) {
     ProductsPage,
     ReviewPage,
     SearchPage,
-    SurveyComponent,
     Sort,
   ],
-
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -163,6 +161,6 @@ export function createTranslateLoader(http: HttpClient) {
     SurveyProvider,
     ApiWrapper,
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })
 export class AppModule {}
