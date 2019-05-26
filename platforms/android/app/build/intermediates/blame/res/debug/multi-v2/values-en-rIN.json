@@ -1,6 +1,21 @@
 {
     "logs": [
         {
+            "outputFile": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "D:\\app\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rIN\\values-en-rIN.xml",
             "map": [
                 {

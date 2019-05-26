@@ -72,6 +72,79 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-tl\\values-tl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\b767ad83dede81988e59c5e8bd292080\\res\\values-tl\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,388,596,732,839,1056,1190,1328,1566,1671,1880,2016,2237,2442,2536,2628",
+                        "endColumns": "104,207,135,106,216,133,137,237,104,208,135,220,204,93,91,105",
+                        "endOffsets": "387,595,731,838,1055,1189,1327,1565,1670,1879,2015,2236,2441,2535,2627,2733"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,422,562,673,890,1028,1375,1613,1722,1931,2071,2292,2501,2599,2695",
+                        "endColumns": "108,207,139,110,216,137,141,237,108,208,139,220,208,97,95,109",
+                        "endOffsets": "209,417,557,668,885,1023,1165,1608,1717,1926,2066,2287,2496,2594,2690,2800"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.2.2.aar\\b37803d7ee6ea09303ba09f9a62c25e1\\res\\values-tl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "204",
+                        "endOffsets": "489"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "1170",
+                        "endColumns": "204",
+                        "endOffsets": "1370"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-11.2.2.aar\\0ec3f1ec61193d17e2922b100b6dc751\\res\\values-tl\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "230",
+                        "endColumns": "97",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "2805",
+                        "endColumns": "101",
+                        "endOffsets": "2902"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\values-tl\\values-tl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2907",
+                        "endColumns": "100",
+                        "endOffsets": "3003"
+                    }
+                }
+            ]
         }
     ]
 }

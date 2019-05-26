@@ -1,4 +1,4 @@
-#Fri May 17 16:49:40 ICT 2019
-base.0=D\:\\app\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Sun May 26 04:48:16 ICT 2019
+base.0=C\:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
-file.0=D\:\\app\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
+file.0=C\:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

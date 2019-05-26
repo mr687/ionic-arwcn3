@@ -5,12 +5,13 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="primary">
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-       </ion-buttons>
+  <ion-navbar color="header">
+    <button id="ha" ion-button icon-only (click)="goHome()" style="background:transparent;float:left;box-shadow: 0px 0px;">
+      <ion-icon color="dark" ios="ios-arrow-back" md="md-arrow-back">
+      </ion-icon>
+    </button> 
        
-      <ion-title>Quiz</ion-title>
+      <ion-title style="text-align: center;margin-top:15px;">Quiz</ion-title>
   </ion-navbar>
 </ion-header>
 

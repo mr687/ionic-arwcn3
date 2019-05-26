@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { SurveyComponent } from './survey/survey';
-import { ChartComponent } from './chart/chart';
 @NgModule({
-	declarations: [SurveyComponent,
-    ChartComponent],
+	declarations: [SurveyComponent],
 	imports: [],
-	exports: [SurveyComponent,
-    ChartComponent]
+	exports: [SurveyComponent]
 })
 export class ComponentsModule {}

@@ -72,6 +72,79 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-af\\values-af.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.2.2.aar\\b37803d7ee6ea09303ba09f9a62c25e1\\res\\values-af\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "285",
+                        "endColumns": "201",
+                        "endOffsets": "486"
+                    },
+                    "to": {
+                        "startLines": "9",
+                        "startColumns": "4",
+                        "startOffsets": "1106",
+                        "endColumns": "201",
+                        "endOffsets": "1303"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-gcm-11.2.2.aar\\0ec3f1ec61193d17e2922b100b6dc751\\res\\values-af\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "230",
+                        "endColumns": "98",
+                        "endOffsets": "328"
+                    },
+                    "to": {
+                        "startLines": "19",
+                        "startColumns": "4",
+                        "startOffsets": "2639",
+                        "endColumns": "102",
+                        "endOffsets": "2737"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\values-af\\values-af.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "20",
+                        "startColumns": "4",
+                        "startOffsets": "2742",
+                        "endColumns": "100",
+                        "endOffsets": "2838"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\b767ad83dede81988e59c5e8bd292080\\res\\values-af\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "283,388,576,700,808,1017,1137,1264,1489,1595,1783,1908,2106,2286,2378,2467",
+                        "endColumns": "104,187,123,107,208,119,126,224,105,187,124,197,179,91,88,103",
+                        "endOffsets": "387,575,699,807,1016,1136,1263,1488,1594,1782,1907,2105,2285,2377,2466,2570"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,402,530,642,851,975,1308,1533,1643,1831,1960,2158,2342,2438,2531",
+                        "endColumns": "108,187,127,111,208,123,130,224,109,187,128,197,183,95,92,107",
+                        "endOffsets": "209,397,525,637,846,970,1101,1528,1638,1826,1955,2153,2337,2433,2526,2634"
+                    }
+                }
+            ]
         }
     ]
 }

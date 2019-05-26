@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, LoadingController, AlertController,ItemSliding, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, AlertController, NavParams } from 'ionic-angular';
 
 import { SurveyProvider } from '../../providers/survey/survey';
 
 import { SurveyModel } from "../../models/survey.model";
+
+import { Home } from "../home/home";
 
 import { ApiWrapper } from '../../providers/survey/api-wrapper';
 import {Observable} from 'rxjs/Observable';
@@ -73,6 +75,9 @@ getActiveSurveys() {
                 loading.dismiss();
         }
     );
+}
+goHome() {
+    this.navCtrl.setRoot(Home);
 }
 
 }
