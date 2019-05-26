@@ -20,6 +20,7 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="Orientation" value="portrait" />
+    <preference name="loadUrlTimeoutValue" value="70000" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -91,6 +92,6 @@
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <plugin name="com-sarriaroman-photoviewer" spec="^1.1.16" />
     <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" />
-    <engine name="android" spec="7.0.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^2.0.2" />
+    <engine name="android" spec="7.0.0" />
 </widget>

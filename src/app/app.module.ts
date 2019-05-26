@@ -166,6 +166,7 @@ export function createTranslateLoader(http: HttpClient) {
     {provide: HTTP_INTERCEPTORS, useClass: TimingInterceptor, multi: true},
     SurveyProvider,
     ApiWrapper,
+    SurveyProvider,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA]
 })

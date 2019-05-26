@@ -36,6 +36,10 @@ export class SurveyPage {
       this.getSurveys();
   }
 
+  handleProductResults(results) {
+      console.log(results);
+  }
+
   getSurveys() {
     let loading = this.loadingCtrl.create({
         content: "Loading..."
@@ -43,7 +47,7 @@ export class SurveyPage {
     loading.present();
     Observable.forkJoin(this.surveyProvider.getActiveSurveys())
         .subscribe(data => {
-            // console.log(data);
+            console.log(data);
             this.surveys = SurveyModel.fromJSONArray(data[0]);
             this.survey = this.surveys[0];
             loading.dismiss();

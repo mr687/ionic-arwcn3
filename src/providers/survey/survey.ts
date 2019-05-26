@@ -13,7 +13,6 @@ interface ItemsResponse {
 
 /*
  Generated class for the SurveyProvider provider.
-
  See https://angular.io/guide/dependency-injection for more info on providers
  and Angular DI.
  */
