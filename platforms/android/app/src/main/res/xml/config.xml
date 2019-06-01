@@ -95,4 +95,5 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="Orientation" value="portrait" />
+    <preference name="loadUrlTimeoutValue" value="70000" />
 </widget>
