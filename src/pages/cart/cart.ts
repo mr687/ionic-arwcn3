@@ -28,6 +28,9 @@ export class CartPage {
     shipping: any;
     Apply: any;
     Checkout: any;
+    provinces:any;
+    city:any;
+    subdistrict:any;
     constructor(public nav: NavController, public service: CartService, public values: Values, public params: NavParams, public functions: Functions) {
         this.Apply = "Apply";
         this.Checkout = "Checkout";
@@ -53,12 +56,26 @@ export class CartPage {
         this.disableSubmit = true;
         this.Checkout = "Please Wait";
         this.service.checkout()
-            .then((results) => this.handleBilling(results));
+            .then((results) => this.handleAnother(results));
     }
-    handleBilling(results) {
+    handleAnother(co){
+        this.service.getProvinces().then((results) => this.handleProvince(results,co));
+    }
+    handleProvince(prov,co){
+        this.service.getCity().then((results) => this.handleCity(results,co,prov));
+    }
+    handleCity(ci,co,prov){
+        this.service.getSubdisctrict().then((results) => this.handleBilling(results,ci,co,prov));
+    }
+    handleBilling(sub,ci,co,prov) {
         this.disableSubmit = false;
         this.Checkout = "Checkout";
-        this.nav.push(BillingAddressForm, results);
+        this.nav.push(BillingAddressForm, {
+            subdistrict : sub,
+            city        : ci,
+            checkout    : co,
+            provinces   : prov
+        });
     }
     deleteFromCart(id, key) {
         this.service.deleteFromCart(id, key)

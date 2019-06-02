@@ -51,7 +51,13 @@ export class BillingAddressForm {
         this.buttonText1 = "Apply";
         this.LogIn = "LogIn";
         this.loginData = [];
-        this.form = params.data;
+
+
+        this.form = params.data.checkout;
+        this.subdistrict = params.data.subdistrict;
+        this.cityByProv = params.data.city;
+        this.provinces = params.data.provinces;
+        
         this.billing = {};
         //this.billing.shipping = true;
         this.billing.save_in_address_book = true;
@@ -63,40 +69,25 @@ export class BillingAddressForm {
         // console.log('daph',this.form);
         // this.getRegion(this.form.billing_country);
 
-
-        this.service.getProvinces().then((results) => this.updateProvinces(results));
-        this.service.getCity().then((results) => this.updateCityByProv(results));
-        this.service.getSubdisctrict().then((results) => this.updateSubdistrict(results));
-    }
-    updateSubdistrict(result){
-        this.subdistrict = result;
-        console.log('subdistrict', this.subdistrict);
-        this.getSubdistrict(this.form.billing_address_2);
-        this.getSubdistrict(this.form.shipping_address_2);
-    }
-    updateProvinces(result){
-        this.provinces = result;
-        // console.log('province', this.provinces);
-    }
-    updateCityByProv(result){
-        this.cityByProv = result;
-        // console.log('city', this.cityByProv);
+        this.getSubdistrict(this.form.billing_city);
+        this.getSubdistrict(this.form.shipping_city);
 
         this.getCity(this.form.billing_state);
         this.getCity(this.form.shipping_state);
+
     }
     getRegion(countryId) {
         // console.log('countryId.form', this.form);
         this.states = this.form.state[countryId];
-        console.log('this.states', this.states);
+        // console.log('this.states', this.states);
         this.service.updateOrderReview(this.form, this.OrderReview.shipping)
             .then((results) => this.handleOrderReviews(results));
     }
     getCity(stateId) {
-        console.log("dapi hai");
+        // console.log("dapi hai");
         var province = this.provinces[stateId];
-        console.log('stateId', stateId);
-        console.log('provinceId', province);
+        // console.log('stateId', stateId);
+        // console.log('provinceId', province);
         var citi = [];
         for(var i=0;i<this.cityByProv.length;i++){
             if(this.cityByProv[i].province_id == province.province_id){
@@ -104,12 +95,12 @@ export class BillingAddressForm {
             }
         }
         this.city = citi;
-        console.log('this.cityDaph', this.city);
+        // console.log('this.cityDaph', this.city);
         this.service.updateOrderReview(this.form, this.OrderReview.shipping)
             .then((results) => this.handleOrderReviews(results));
     }
     getSubdistrict(cityId) {
-        console.log('stateId', cityId);
+        // console.log('stateId', cityId);
         var district = [];
         for(var i=0;i<this.subdistrict.length;i++){
             if(this.subdistrict[i].city_id == cityId){
@@ -117,7 +108,7 @@ export class BillingAddressForm {
             }
         }
         this.suite = district;
-        console.log('this.suiteDaph', this.suite);
+        // console.log('this.suiteDaph', this.suite);
         this.service.updateOrderReview(this.form, this.OrderReview.shipping)
             .then((results) => this.handleOrderReviews(results));
     }
