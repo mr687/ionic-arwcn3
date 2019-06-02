@@ -42,6 +42,9 @@ export class BillingAddressForm {
     order: any;
     buttonText : any;
     chosen_shipping: any = [];
+    provinces:any;
+    cityByProv:any;
+    subdistrict:any;
     
     constructor(public iab: InAppBrowser, public nav: NavController, public service: CheckoutService, public platform: Platform, private oneSignal: OneSignal, params: NavParams, public functions: Functions, public values: Values) {
         this.PlaceOrder = "Place Order";
@@ -54,29 +57,72 @@ export class BillingAddressForm {
         this.billing.save_in_address_book = true;
         this.getRegion(this.form.billing_country);
         this.getRegion(this.form.shipping_country);
-        this.getCity(this.form.billing_state);
-        this.getCity(this.form.shipping_state);
         this.form.shipping = false;
         this.shipping = {};
         this.shipping.save_in_address_book = true;
+        // console.log('daph',this.form);
         // this.getRegion(this.form.billing_country);
+
+
+        this.service.getProvinces().then((results) => this.updateProvinces(results));
+        this.service.getCity().then((results) => this.updateCityByProv(results));
+        this.service.getSubdisctrict().then((results) => this.updateSubdistrict(results));
+    }
+    updateSubdistrict(result){
+        this.subdistrict = result;
+        console.log('subdistrict', this.subdistrict);
+        this.getSubdistrict(this.form.billing_address_2);
+        this.getSubdistrict(this.form.shipping_address_2);
+    }
+    updateProvinces(result){
+        this.provinces = result;
+        // console.log('province', this.provinces);
+    }
+    updateCityByProv(result){
+        this.cityByProv = result;
+        // console.log('city', this.cityByProv);
+
+        this.getCity(this.form.billing_state);
+        this.getCity(this.form.shipping_state);
     }
     getRegion(countryId) {
-        console.log('countryId.form', this.form);
+        // console.log('countryId.form', this.form);
         this.states = this.form.state[countryId];
         console.log('this.states', this.states);
         this.service.updateOrderReview(this.form, this.OrderReview.shipping)
             .then((results) => this.handleOrderReviews(results));
     }
     getCity(stateId) {
+        console.log("dapi hai");
+        var province = this.provinces[stateId];
         console.log('stateId', stateId);
-        this.city = this.form.country.states[stateId];
-        console.log('this.city', this.city);
-    this.service.updateOrderReview(this.form, this.OrderReview.shipping)
-        .then((results) => this.handleOrderReviews(results));
+        console.log('provinceId', province);
+        var citi = [];
+        for(var i=0;i<this.cityByProv.length;i++){
+            if(this.cityByProv[i].province_id == province.province_id){
+                citi.push(this.cityByProv[i]);
+            }
+        }
+        this.city = citi;
+        console.log('this.cityDaph', this.city);
+        this.service.updateOrderReview(this.form, this.OrderReview.shipping)
+            .then((results) => this.handleOrderReviews(results));
+    }
+    getSubdistrict(cityId) {
+        console.log('stateId', cityId);
+        var district = [];
+        for(var i=0;i<this.subdistrict.length;i++){
+            if(this.subdistrict[i].city_id == cityId){
+                district.push(this.subdistrict[i]);
+            }
+        }
+        this.suite = district;
+        console.log('this.suiteDaph', this.suite);
+        this.service.updateOrderReview(this.form, this.OrderReview.shipping)
+            .then((results) => this.handleOrderReviews(results));
     }
     handleOrderReviews(results){
-    console.log('this.form', this.form);
+    // console.log('this.form', this.form);
       this.loading = false;
       this.OrderReview = results;
     }

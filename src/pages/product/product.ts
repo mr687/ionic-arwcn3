@@ -112,8 +112,7 @@ export class ProductPage {
         this.getReviews();
     }
     external(url){
-        var options = "location=yes,hidden=no,toolbar=yes";
-        let browser = this.iab.create(url, '_blank', options);
+        let browser = this.iab.create(url, '_blank');
         browser.show();
     }
     getVariationProducts() {
@@ -151,6 +150,7 @@ export class ProductPage {
         this.nav.push(CartPage);
     }
     updateCart(a) {
+        // console.log(a);
         this.disableSubmit = false;
         this.values.count += parseInt(this.quantity);
         this.AddToCart = "Add To Cart";

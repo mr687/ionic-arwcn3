@@ -87449,39 +87449,6 @@ survey h5 {
   margin-top: 15px !important;
 }
 
-charts-modal .card-md h5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #ccc;
-  width: 100%;
-  margin-top: 0.2em !important;
-  margin-bottom: 0.8em !important;
-  font-size: 1.8rem;
-}
-
-charts-modal .card-md h5::before,
-charts-modal .card-md h5::after {
-  content: "";
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  border-bottom: 1px solid #ccc;
-}
-
-charts-modal .card-md h5::before {
-  margin-right: .3em;
-}
-
-charts-modal .card-md h5::after {
-  margin-left: .3em;
-}
-
 .account-address {
   font-family: Arial;
 }
@@ -90581,6 +90548,83 @@ charts-modal .card-md h5::after {
   text-align: justify;
 }
 
+.product-page .description .scroll-related-products {
+  padding: 4px 4px 6px 4px;
+  background-color: #fffff;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.product-page .description .scroll-related-products h5 {
+  margin: 0;
+  border-radius: 3px;
+  padding: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.product-page .description .scroll-related-products a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  width: 42%;
+  margin: 0 5px 0 5px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .product-page .description .scroll-related-products a {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-page .description .scroll-related-products a {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-page .description .scroll-related-products a {
+    width: 20%;
+  }
+}
+
+.product-page .description .scroll-related-products img {
+  height: auto;
+  width: 100%;
+}
+
+.product-page .description .scroll-related-products ion-card {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-left: 2px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.product-page .description .scroll-related-products ion-card-content {
+  padding: 0;
+}
+
+.product-page .description .scroll-related-products .price-delete {
+  color: #535766;
+  font-size: 12px;
+}
+
+.product-page .description .scroll-related-products .price-regular {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-page .description .scroll-related-products ion-label {
+  margin: 0;
+  padding: 0 6px 6px 6px;
+}
+
 .product-page .product-name {
   font-size: 15px;
   font-weight: 600;
@@ -92109,4 +92153,9 @@ charts-modal .card-md h5::after {
   margin: 3px;
   width: calc(100% - 6px);
   background-color: #f9f9f9;
+}
+
+page-survey-details button#ha {
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75) !important;
 }

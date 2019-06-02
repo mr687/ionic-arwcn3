@@ -38,7 +38,6 @@ export class CartPage {
             .then((results) => this.handleCartInit(results));
     }
     handleCartInit(results) {
-        console.log(results);
         this.cart = results;
         this.shipping = results.zone_shipping;
         this.chosen_shipping = results.chosen_shipping;

@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\drawable-xxhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
-    },
-    {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_disabled.xml.flat",
         "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\b767ad83dede81988e59c5e8bd292080\\res\\drawable\\common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
         "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action.xml.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\layout\\activity_photo.xml"
     },
     {
-        "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
-        "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
-    },
-    {
         "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_common_full_open_on_phone.png.flat",
         "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\drawable-hdpi-v4\\common_full_open_on_phone.png"
+    },
+    {
+        "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_disabled.xml.flat",
+        "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\drawable\\common_google_signin_btn_text_disabled.xml"
     },
     {
         "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -184,12 +184,12 @@
         "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-hdpi\\ic_action_next_item.png"
     },
     {
-        "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
-        "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\color\\common_google_signin_btn_text_dark.xml"
-    },
-    {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
         "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\OneSignal-3.8.1.aar\\c1105a39c5d7df13b5ec2917f3194128\\res\\drawable-hdpi-v4\\ic_os_notification_fallback_white_24dp.png"
+    },
+    {
+        "merged": "D:\\app\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_text_dark.xml.flat",
+        "source": "C:\\Users\\Garuda Network\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\6cd09a22c81e4bfc4382412710305828\\res\\color\\common_google_signin_btn_text_dark.xml"
     },
     {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_narrow_custom.xml.flat",

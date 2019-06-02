@@ -25,6 +25,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SurveyPage } from '../pages/survey/survey';
 
+import { BillingAddressForm } from '../pages/checkout/billing-address-form/billing-address-form';
+
 @Component({
     templateUrl: 'app.html'
 })

@@ -85,7 +85,8 @@ export class ProductService {
                 searchParams.set(param, params[param]);
             }
             this.http.post(this.config.url + '/wp-admin/admin-ajax.php?action=mstoreapp-add_to_cart', searchParams, this.config.options).map(res => res.json())
-                .subscribe(data => {
+            .subscribe(data => {
+                    console.log(data);
                     this.status = data;
                     resolve(this.status);
                 });

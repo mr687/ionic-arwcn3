@@ -161,7 +161,6 @@
             </ion-item>
             </div-->
 
-
                 <ion-grid class="add-to-cart" *ngIf="product.type == 'external'">
                     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="external(product?.external_url)" style="margin: 0;width: 100%; min-height: 50px; color: white; box-shadow: none;">
                     {{"Buy now" | translate}}

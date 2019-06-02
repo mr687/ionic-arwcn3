@@ -15,6 +15,7 @@ export class CartService {
     cart: any;
     status: any;
     billing: any;
+    // billing_other: any;
     headers: any;
     paymentMethods: any;
     loader: any;
@@ -24,7 +25,8 @@ export class CartService {
     loadCart() {
         return new Promise(resolve => {
             this.http.get(this.config.url + '/wp-admin/admin-ajax.php?action=mstoreapp-cart', this.config.options).map(res => res.json())
-                .subscribe(data => {
+            .subscribe(data => {
+                    console.log(data);
                     this.cart = data;
                     this.values.cartNonce = data.cart_nonce;
                     this.values.updateCart(this.cart);
@@ -40,6 +42,30 @@ export class CartService {
                     this.values.updateCart(this.cart);
                     resolve(this.cart);
                 });
+        });
+    }
+    getProvinces(){
+        return new Promise(resolve=>{
+            this.http.get(this.config.url + '/wp-content/plugins/woongkir/data/province2.json', this.config.options).map(res => res.json())
+            .subscribe(data => {
+                resolve(data);
+            });
+        });
+    }
+    getCity(){
+        return new Promise(resolve=>{
+            this.http.get(this.config.url + '/wp-content/plugins/woongkir/data/city.json', this.config.options).map(res => res.json())
+            .subscribe(data => {
+                resolve(data);
+            });
+        });
+    }
+    getSubdisctrict(){
+        return new Promise(resolve=>{
+            this.http.get(this.config.url + '/wp-content/plugins/woongkir/data/subdistrict.json', this.config.options).map(res => res.json())
+            .subscribe(data => {
+                resolve(data);
+            });
         });
     }
     checkout() {
