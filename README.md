@@ -9,10 +9,37 @@
 
  ## Configuration Custom Button (Product Page)
  
- 1) In src/pages/product/product.html:170, edit:
-      ```html
-      <ion-grid class="add-to-cart" *ngIf="product.type != 'external'">
-         <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="buyNow(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;background-color: #0cd1e8; color: white; box-shadow: none;">{{"Buy now" | translate}}</button>
-         <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="addToCart(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;box-shadow: none;">{{AddToCart | translate}}</button>
-      </ion-grid>
-      ```
+ In src/pages/product/product.html:170, edit:
+  ```html
+  <ion-grid class="add-to-cart" *ngIf="product.type != 'external'">
+     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="buyNow(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;background-color: #0cd1e8; color: white; box-shadow: none;">{{"Buy now" | translate}}</button>
+     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="addToCart(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;box-shadow: none;">{{AddToCart | translate}}</button>
+  </ion-grid>
+  ```
+  
+  ## Configuration Field Kota & Kecamatan
+  
+  In src/pages/checkout/billing-address-form/billing-address-form.html:81, edit:
+  ```html
+  <ion-item *ngIf="city?.length">
+    <ion-label>Town / {{"City" | translate}} </ion-label>
+    <ion-select [(ngModel)]="form.billing_city" (ngModelChange)="getSubdistrict(form.billing_city)" name="billing_city">
+      <div *ngFor="let field of city">
+        <ion-option value="{{field.type}} {{field.city_name}}"><span>{{field.type}} {{field.city_name}}</span> </ion-option>
+      </div>
+    </ion-select>
+   </ion-item>
+  .
+  .
+  .
+  <ion-item *ngIf="suite?.length">
+    <ion-label> {{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}} </ion-label>
+    <ion-select required [(ngModel)]="form.billing_address_2" (ngModelChange)="form.billing_address_2" name="billing_address_2">
+      <div *ngFor="let field of suite">
+        <ion-option value="{{field.subdistrict_name}}">Kecamatan {{field.subdistrict_name}}</ion-option>
+      </div>
+    </ion-select>
+   </ion-item>
+  ```
+  
+  ###Update 3 June 2019
