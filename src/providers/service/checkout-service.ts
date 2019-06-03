@@ -27,7 +27,7 @@ export class CheckoutService {
 
     }
     updateOrderReview(form, shipping) {
-        console.log("UpdateOrderReview",form);
+        // console.log("UpdateOrderReview",form);
         var params = new URLSearchParams();
         params.append("security", form.nonce.update_order_review_nonce);
         params.append("payment_method", form.payment_method);

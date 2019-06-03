@@ -87,11 +87,6 @@
                     </ion-select>
                 </ion-item>
 
-                <!-- <ion-item>
-                    <ion-label floating>Town / {{"City" | translate}} </ion-label>
-                    <ion-input required type="text" [(ngModel)]="form.billing_city" name="city"> </ion-input>
-                </ion-item> -->
-
                 <ion-item>
                     <ion-label floating>{{"Street Address" | translate}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="form.billing_address_1" name="street1"> </ion-input>
@@ -170,38 +165,51 @@
                         <ion-input required type="text" [(ngModel)]="form.shipping_last_name" name="last_name"> </ion-input>
                     </ion-item>
                     <ion-item>
-                        <ion-label floating>{{"Street Address" | translate}}</ion-label>
-                        <ion-input required type="text" [(ngModel)]="form.shipping_address_1" name="address_1"> </ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>{{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}}</ion-label>
-                        <ion-input required type="text" [(ngModel)]="form.shipping_address_2" name="address_2"> </ion-input>
-                    </ion-item>
-                    <ion-item>
-                        <ion-label floating>{{"City" | translate}} </ion-label>
-                        <ion-input required type="text" [(ngModel)]="form.shipping_city" name="shipping_city"> </ion-input>
-                    </ion-item>
-                     <ion-item>
-                        <ion-label floating>{{"Postcode" | translate}} </ion-label>
-                        <ion-input required type="text" [(ngModel)]="form.shipping_postcode" name="shipping_postcode"> </ion-input>
-                    </ion-item>
-                    
-                    <ion-item>
                         <ion-label> {{"Country" | translate}} </ion-label>
-                        <ion-select [(ngModel)]="form.shipping_country" (ngModelChange)="getRegion(form.shipping_country)" name="shipping_country">
+                        <ion-select [(ngModel)]="form.shipping_country" (ngModelChange)="getRegionShipping(form.shipping_country)" name="shipping_country">
                             <div *ngFor="let field of form.country.countries | keys">
                                 <ion-option value="{{field.key}}"><span [innerHTML]="field.value"></span> </ion-option>
                             </div>
                         </ion-select>
                     </ion-item>
 
-                    <ion-item *ngIf="states">
+                    <ion-item *ngIf="statesShipping">
                         <ion-label> {{"State" | translate}} </ion-label>
-                        <ion-select [(ngModel)]="form.shipping_state" name="form.shipping_state">
-                            <div *ngFor="let field of states | keys">
+                        <ion-select [(ngModel)]="form.shipping_state" (ngModelChange)="getCityShipping(form.shipping_state)" name="form.shipping_state">
+                            <div *ngFor="let field of statesShipping | keys">
                                 <ion-option value="{{field.key}}">{{field.value}} </ion-option>
                             </div>
                         </ion-select>
+                    </ion-item>
+                    
+                    <ion-item *ngIf="cityShipping?.length">
+                        <ion-label>Town / {{"City" | translate}} </ion-label>
+                        <ion-select [(ngModel)]="form.shipping_city" (ngModelChange)="getSubdistrictShipping(form.shipping_city)" name="shipping_city">
+                            <div *ngFor="let field of cityShipping">
+                                <ion-option value="{{field.type}} {{field.city_name}}"><span>{{field.type}} {{field.city_name}}</span> </ion-option>
+                            </div>
+                        </ion-select>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label floating>{{"Street Address" | translate}}</ion-label>
+                        <ion-input required type="text" [(ngModel)]="form.shipping_address_1" name="address_1"> </ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="!suiteShipping">
+                        <ion-label floating>{{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}}</ion-label>
+                        <ion-input required type="text" [(ngModel)]="form.shipping_address_2" name="address_2"> </ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="suiteShipping">
+                        <ion-label> {{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}} </ion-label>
+                        <ion-select required [(ngModel)]="form.shipping_address_2" (ngModelChange)="form.shipping_address_2" name="address_2">
+                            <div *ngFor="let field of suiteShipping">
+                                <ion-option value="{{field.subdistrict_name}}">Kecamatan {{field.subdistrict_name}}</ion-option>
+                            </div>
+                        </ion-select>
+                    </ion-item>
+                     <ion-item>
+                        <ion-label floating>{{"Postcode" | translate}} </ion-label>
+                        <ion-input required type="text" [(ngModel)]="form.shipping_postcode" name="shipping_postcode"> </ion-input>
                     </ion-item>
 
                     <ion-item *ngIf="!states">

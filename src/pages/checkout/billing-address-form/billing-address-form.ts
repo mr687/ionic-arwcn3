@@ -15,13 +15,16 @@ export class BillingAddressForm {
     billingAddressForm: any;
     billing: any;
     city: any;
+    cityShipping: any;
     regions: any;
     status: any;
     errorMessage: any;
     address: any;
     form: any;
     states: any;
+    statesShipping: any;
     suite: any;
+    suiteShipping: any;
     OrderReview: any = {};
     loginData: any;
     id: any;
@@ -62,7 +65,7 @@ export class BillingAddressForm {
         //this.billing.shipping = true;
         this.billing.save_in_address_book = true;
         this.getRegion(this.form.billing_country);
-        this.getRegion(this.form.shipping_country);
+        this.getRegionShipping(this.form.shipping_country);
         this.form.shipping = false;
         this.shipping = {};
         this.shipping.save_in_address_book = true;
@@ -70,12 +73,51 @@ export class BillingAddressForm {
         // this.getRegion(this.form.billing_country);
 
         this.getSubdistrict(this.form.billing_city);
-        this.getSubdistrict(this.form.shipping_city);
+        this.getSubdistrictShipping(this.form.shipping_city);
 
         this.getCity(this.form.billing_state);
-        this.getCity(this.form.shipping_state);
+        this.getCityShipping(this.form.shipping_state);
 
     }
+
+    getRegionShipping(countryId) {
+        // console.log('countryId.form', this.form);
+        this.statesShipping = this.form.state[countryId];
+        // console.log('this.states', this.states);
+        this.service.updateOrderReview(this.form, this.OrderReview.shipping)
+            .then((results) => this.handleOrderReviews(results));
+    }
+    getCityShipping(stateId) {
+        // console.log("dapi hai");
+        var province = this.provinces[stateId];
+        // console.log('stateId', stateId);
+        // console.log('provinceId', province);
+        var citi = [];
+        for(var i=0;i<this.cityByProv.length;i++){
+            if(this.cityByProv[i].province_id == province.province_id){
+                citi.push(this.cityByProv[i]);
+            }
+        }
+        this.cityShipping = citi;
+        // console.log('this.cityDaph', this.city);
+        this.service.updateOrderReview(this.form, this.OrderReview.shipping)
+            .then((results) => this.handleOrderReviews(results));
+    }
+    getSubdistrictShipping(cityId) {
+        // console.log('stateId', cityId);
+        var district = [];
+        for(var i=0;i<this.subdistrict.length;i++){
+            var str = this.subdistrict[i].type + " " + this.subdistrict[i].city
+            if(str == cityId){
+                district.push(this.subdistrict[i]);
+            }
+        }
+        this.suiteShipping = district;
+        // console.log('this.suiteDaph', this.suite);
+        this.service.updateOrderReview(this.form, this.OrderReview.shipping)
+            .then((results) => this.handleOrderReviews(results));
+    }
+
     getRegion(countryId) {
         // console.log('countryId.form', this.form);
         this.states = this.form.state[countryId];
@@ -103,8 +145,8 @@ export class BillingAddressForm {
         // console.log('stateId', cityId);
         var district = [];
         for(var i=0;i<this.subdistrict.length;i++){
-            var str = this.subdistrict[i].city
-            if(cityId.includes(str)){
+            var str = this.subdistrict[i].type + " " + this.subdistrict[i].city
+            if(str == cityId){
                 district.push(this.subdistrict[i]);
             }
         }
