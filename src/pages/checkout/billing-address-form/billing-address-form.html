@@ -78,11 +78,11 @@
                     </ion-select>
                 </ion-item>
 
-                <ion-item *ngIf="city">
+                <ion-item *ngIf="city?.length">
                     <ion-label>Town / {{"City" | translate}} </ion-label>
                     <ion-select [(ngModel)]="form.billing_city" (ngModelChange)="getSubdistrict(form.billing_city)" name="billing_city">
                         <div *ngFor="let field of city">
-                            <ion-option value="{{field.city_id}}"><span>{{field.type}} {{field.city_name}}</span> </ion-option>
+                            <ion-option value="{{field.type}} {{field.city_name}}"><span>{{field.type}} {{field.city_name}}</span> </ion-option>
                         </div>
                     </ion-select>
                 </ion-item>
@@ -96,15 +96,15 @@
                     <ion-label floating>{{"Street Address" | translate}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="form.billing_address_1" name="street1"> </ion-input>
                 </ion-item>
-                <ion-item *ngIf="!suite">
+                <ion-item *ngIf="!suite.length">
                     <ion-label floating>{{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}}</ion-label>
                     <ion-input required type="text" [(ngModel)]="form.billing_address_2" name="billing_address_2"> </ion-input>
                 </ion-item>
-                <ion-item *ngIf="suite">
+                <ion-item *ngIf="suite?.length">
                     <ion-label> {{"Apartment" | translate}}, {{"suite" | translate}}, {{"unit" | translate}} {{"etc" | translate}} </ion-label>
-                    <ion-select [(ngModel)]="form.billing_address_2" (ngModelChange)="form.billing_address_2" name="billing_address_2">
+                    <ion-select required [(ngModel)]="form.billing_address_2" (ngModelChange)="form.billing_address_2" name="billing_address_2">
                         <div *ngFor="let field of suite">
-                            <ion-option value="{{field.subdistrict_id}}">Kecamatan {{field.subdistrict_name}}</ion-option>
+                            <ion-option value="{{field.subdistrict_name}}">Kecamatan {{field.subdistrict_name}}</ion-option>
                         </div>
                     </ion-select>
                 </ion-item>

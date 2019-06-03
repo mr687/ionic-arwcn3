@@ -103,7 +103,8 @@ export class BillingAddressForm {
         // console.log('stateId', cityId);
         var district = [];
         for(var i=0;i<this.subdistrict.length;i++){
-            if(this.subdistrict[i].city_id == cityId){
+            var str = this.subdistrict[i].city
+            if(cityId.includes(str)){
                 district.push(this.subdistrict[i]);
             }
         }
@@ -113,7 +114,7 @@ export class BillingAddressForm {
             .then((results) => this.handleOrderReviews(results));
     }
     handleOrderReviews(results){
-    // console.log('this.form', this.form);
+    console.log('OrderReview', this.OrderReview);
       this.loading = false;
       this.OrderReview = results;
     }
