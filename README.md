@@ -1,4 +1,4 @@
-## Configuration Survey JS API
+## Configuration SurveyJS API
 
  1) To use your own surveys register in [SurveyJS](https://surveyjs.io/Account/Register)
  2) Create your own survey.
