@@ -42,4 +42,10 @@
    </ion-item>
   ```
   
-  ###Update 3 June 2019
+  ## Website Speed Optimization
+  1) [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin added.
+  2) [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) plugin added.
+  3) [WP Smushit](https://wordpress.org/plugins/wp-smushit/) plugin added.
+  4) Adding script in .htaccess
+  
+  ###Update 14 June 2019
