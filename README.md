@@ -50,7 +50,7 @@
   5) Image optimization.
   
   ## Adding Custom Fields to Products (Shopping Origin)
-  1) In [Add Product](http://cirung.com/wp-admin/post-new.php?post_type=product) -> Shipping, Change
+  In [Add Product](http://cirung.com/wp-admin/post-new.php?post_type=product) -> Shipping, Change
     1) Shipping Origin Province
     2) Shipping Origin City
     3) Shipping Origin Subdistrict
