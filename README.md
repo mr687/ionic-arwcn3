@@ -42,11 +42,14 @@
    </ion-item>
   ```
   
+  ## Ionic Icon
+  In resources/android/icon. Rename it.
+  
   ## Website Speed Optimization
   1) [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin added.
   2) [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) plugin added.
   3) [WP Smushit](https://wordpress.org/plugins/wp-smushit/) plugin added.
-  4) Adding script in .htaccess
+  4) Adding script in /.htaccess
   5) Image optimization.
   
   ## Adding Custom Fields to Products (Shopping Origin)
