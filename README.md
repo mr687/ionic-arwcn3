@@ -47,5 +47,12 @@
   2) [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) plugin added.
   3) [WP Smushit](https://wordpress.org/plugins/wp-smushit/) plugin added.
   4) Adding script in .htaccess
+  5) Image optimization.
+  
+  ## Adding Custom Fields to Products (Shopping Origin)
+  1) In [Add Product](http://cirung.com/wp-admin/post-new.php?post_type=product) -> Shipping, Change
+    1) Shipping Origin Province
+    2) Shipping Origin City
+    3) Shipping Origin Subdistrict
   
   ###Update 14 June 2019
