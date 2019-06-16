@@ -163,13 +163,13 @@
 
                 <ion-grid class="add-to-cart" *ngIf="product.type == 'external'">
                     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="external(product?.external_url)" style="margin: 0;width: 100%; min-height: 50px; color: white; box-shadow: none;">
-                    {{"Buy now" | translate}}
+                    {{"Beli Sekarang" | translate}}
                     </button>
                 </ion-grid>
 
                 <ion-grid class="add-to-cart" *ngIf="product.type != 'external'">
                     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="buyNow(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;background-color: #0cd1e8; color: white; box-shadow: none;">
-                    {{"Buy now" | translate}}
+                    {{"Beli Sekarang" | translate}}
                     </button>
                     <button ion-button full text-uppercase color="button-color" [disabled]="product.stock_status == 'outofstock'" (click)="addToCart(product.id)" style="margin: 0.4rem 0.2rem;width: 100%; min-height: 50px;box-shadow: none;">
                     {{AddToCart | translate}}

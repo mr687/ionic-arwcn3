@@ -301,7 +301,7 @@ export class ProductPage {
     }
     presentToastAddToWishlist() {
         let toast = this.toastCtrl.create({
-            message: 'Item added to wishlist',
+            message: 'Item ditambahkan ke wishlist',
             duration: 2000,
             position: 'top'
         });
@@ -309,7 +309,7 @@ export class ProductPage {
     }
     presentToast() {
         let toast = this.toastCtrl.create({
-            message: 'Item added to cart',
+            message: 'Item berhasil ditambahkan',
             duration: 2000,
             position: 'top'
         });

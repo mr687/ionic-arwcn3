@@ -44,12 +44,12 @@
         "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.2.2.aar\\b767ad83dede81988e59c5e8bd292080\\res\\drawable-xhdpi-v4\\googleg_standard_color_18.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-mdpi_screen.png.flat",
-        "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
-    },
-    {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_notification_template_big_media_narrow.xml.flat",
         "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\4bcbd636d0d75489522967f4dbcf675c\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-mdpi_screen.png.flat",
+        "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
     },
     {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_common_google_signin_btn_text_dark_focused.xml.flat",
@@ -100,16 +100,16 @@
         "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_remove.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xxhdpi_screen.png.flat",
-        "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\screen.png"
+        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_action_next_item.png.flat",
         "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_next_item.png"
     },
     {
-        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\rasdhan alfarizqi\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\be39cb4dd3586b389288434cd379f3c5\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+        "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xxhdpi_screen.png.flat",
+        "source": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\screen.png"
     },
     {
         "merged": "C:\\xampp\\htdocs\\ionic\\ionic-arwcn3\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",

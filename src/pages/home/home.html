@@ -260,7 +260,7 @@
     </div>
 
     <div *ngIf="service.onSale?.length" class="Featured-products">
-        <div class="block-title" *ngIf="service.onSale" no-lines class="featured-item-name"> {{"Best Offers" | translate}} <span class="view-all" item-right (click)="viewAllOffers()">{{"View All" | translate}}</span> </div>
+        <div class="block-title" *ngIf="service.onSale" no-lines class="featured-item-name"> {{"Penawaran terbaik" | translate}} <span class="view-all" item-right (click)="viewAllOffers()">{{"Lihat Semua" | translate}}</span> </div>
         <div class="scroll-featured-products">
             <a *ngFor="let item of service.onSale">
                 <ion-card>
