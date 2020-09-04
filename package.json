@@ -63,7 +63,7 @@
     "mx.ferreyra.callnumber": "~0.0.2",
     "node-sass": "^4.11.0",
     "onesignal-cordova-plugin": "^2.3.1",
-    "papaparse": "^4.6.3",
+    "papaparse": "^5.2.0",
     "rxjs": "5.5.7",
     "survey-angular": "^1.0.92",
     "sw-toolbox": "3.6.0",
